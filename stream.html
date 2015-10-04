@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>stream</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<ul style="list-style-type:none"><li>Package Name: stream</li><li>Author: Joe Leslie-Hurd</li><li><a href="stream_packages.html">Sub Packages</a>
+</li><li><a href="stream_verification.html">Verification Results</a>
+</li><li>Date Retrieved: 04/10/2015</li><li>Total number of proofs: 51</li><li>Among them, there are 27 constructive proofs and 24 classical proofs, which means 52.94% of them are constructive proofs.</li><li>Classical proofs have an average size of 1.00 (up to lemma). Constructive proofs have an average size of 1.00 (up to lemma).</li><li>Comment: Stream package from OpenTheory.</li></ul> <table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	  	<th>Name</th>
+
+	    <th>Conclusion</th>
+
+	    <th>Link</th>
+ <tr>
+
+	<td>
+stream_1</td>
+<td>
+sreplicate = siterate I</td>
+<td><a href="stream_1.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_2</td>
+<td>
+smap I = I</td>
+<td><a href="stream_2.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_3</td>
+<td>
+!s. stake s 0 = []</td>
+<td><a href="stream_3.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_4</td>
+<td>
+!s. stream (snth s) = s</td>
+<td><a href="stream_4.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_5</td>
+<td>
+!s. sappend [] s = s</td>
+<td><a href="stream_5.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_6</td>
+<td>
+!s. sdrop s 0 = s</td>
+<td><a href="stream_6.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_7</td>
+<td>
+!f. snth (stream f) = f</td>
+<td><a href="stream_7.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_8</td>
+<td>
+!s. shd s = snth s 0</td>
+<td><a href="stream_8.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_9</td>
+<td>
+!a. sreplicate a = scons a (sreplicate a)</td>
+<td><a href="stream_9.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_10</td>
+<td>
+!s. stl s = sdrop s 1</td>
+<td><a href="stream_10.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_11</td>
+<td>
+!s. sdrop s 1 = stl s</td>
+<td><a href="stream_11.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_12</td>
+<td>
+!a n. snth (sreplicate a) n = a</td>
+<td><a href="stream_12.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_13</td>
+<td>
+!h t. shd (scons h t) = h</td>
+<td><a href="stream_13.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_14</td>
+<td>
+!h t. stl (scons h t) = t</td>
+<td><a href="stream_14.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_15</td>
+<td>
+!s n. LENGTH (stake s n) = n</td>
+<td><a href="stream_15.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_16</td>
+<td>
+!h t. snth (scons h t) 0 = h</td>
+<td><a href="stream_16.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_17</td>
+<td>
+!f. siterate f = sunfold (\a. a,f a)</td>
+<td><a href="stream_17.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_18</td>
+<td>
+!s. stake s 1 = [shd s]</td>
+<td><a href="stream_18.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_19</td>
+<td>
+!s n. sdrop s n = funpow stl n s</td>
+<td><a href="stream_19.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_20</td>
+<td>
+!s n. shd (sdrop s n) = snth s n</td>
+<td><a href="stream_20.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_21</td>
+<td>
+!s1 s2. ssplit (sinterleave s1 s2) = s1,s2</td>
+<td><a href="stream_21.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_22</td>
+<td>
+!s n. snth s (SUC n) = snth (stl s) n</td>
+<td><a href="stream_22.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_23</td>
+<td>
+!s n. sdrop s (SUC n) = stl (sdrop s n)</td>
+<td><a href="stream_23.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_24</td>
+<td>
+!s n. sdrop s (SUC n) = sdrop (stl s) n</td>
+<td><a href="stream_24.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_25</td>
+<td>
+!f s. smap f s = stream (f o snth s)</td>
+<td><a href="stream_25.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_26</td>
+<td>
+!f a. siterate f a = scons a (siterate f (f a))</td>
+<td><a href="stream_26.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_27</td>
+<td>
+!f g. smap f o smap g = smap (f o g)</td>
+<td><a href="stream_27.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_28</td>
+<td>
+!s n. sdrop s n = stream (\m. snth s (m + n))</td>
+<td><a href="stream_28.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_29</td>
+<td>
+!h t n. snth (scons h t) (SUC n) = snth t n</td>
+<td><a href="stream_29.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_30</td>
+<td>
+!s n. stake s (SUC n) = CONS (shd s) (stake (stl s) n)</td>
+<td><a href="stream_30.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_31</td>
+<td>
+!h t s. sappend (CONS h t) s = scons h (sappend t s)</td>
+<td><a href="stream_31.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_32</td>
+<td>
+!l1 l2 s. sappend (APPEND l1 l2) s = sappend l1 (sappend l2 s)</td>
+<td><a href="stream_32.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_33</td>
+<td>
+!s m n. snth s (m + n) = snth (sdrop s n) m</td>
+<td><a href="stream_33.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_34</td>
+<td>
+!s1 s2. (!n. snth s1 n = snth s2 n) <=> s1 = s2</td>
+<td><a href="stream_34.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_35</td>
+<td>
+!s1 s2. (!n. snth s1 n = snth s2 n) ==> s1 = s2</td>
+<td><a href="stream_35.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_36</td>
+<td>
+!f g s. smap (f o g) s = smap f (smap g s)</td>
+<td><a href="stream_36.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_37</td>
+<td>
+!f b. sunfold f b = stream (\n. FST (f (funpow (SND o f) n b)))</td>
+<td><a href="stream_37.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_38</td>
+<td>
+!s n. stake s (SUC n) = APPEND (stake s n) [snth s n]</td>
+<td><a href="stream_38.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_39</td>
+<td>
+!s n i. i < n ==> nth (stake s n) i = snth s i</td>
+<td><a href="stream_39.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_40</td>
+<td>
+!h t. scons h t = stream (\n. if n = 0 then h else snth t (n - 1))</td>
+<td><a href="stream_40.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_41</td>
+<td>
+!s m n. stake s (m + n) = APPEND (stake s m) (stake (sdrop s m) n)</td>
+<td><a href="stream_41.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_42</td>
+<td>
+!s n. snth s n = (if n = 0 then shd s else snth (stl s) (n - 1))</td>
+<td><a href="stream_42.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_43</td>
+<td>
+!s n x. MEM x (stake s n) <=> (?i. i < n /\ x = snth s i)</td>
+<td><a href="stream_43.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_44</td>
+<td>
+!s n.
+    stake s n = (if n = 0 then [] else CONS (shd s) (stake (stl s) (n - 1)))</td>
+<td><a href="stream_44.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_45</td>
+<td>
+!l s.
+    sappend l s =
+    stream (\n. if n < LENGTH l then nth l n else snth s (n - LENGTH l))</td>
+<td><a href="stream_45.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_46</td>
+<td>
+!f b. sunfold f b = (let a,b' = f b in scons a (sunfold f b'))</td>
+<td><a href="stream_46.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_47</td>
+<td>
+!l s n.
+    snth (sappend l s) n =
+    (if n < LENGTH l then nth l n else snth s (n - LENGTH l))</td>
+<td><a href="stream_47.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_48</td>
+<td>
+!s n. set_of_list (stake s n) = {x | ?i. i < n /\ x = snth s i}</td>
+<td><a href="stream_48.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_49</td>
+<td>
+!s1 s2.
+    sinterleave s1 s2 =
+    stream (\n. if EVEN n then snth s1 (n DIV 2) else snth s2 (n DIV 2))</td>
+<td><a href="stream_49.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_50</td>
+<td>
+!s. ssplit s = stream (\n. snth s (2 * n)),stream (\n. snth s (2 * n + 1))</td>
+<td><a href="stream_50.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+stream_51</td>
+<td>
+!p. (!m. ?n. m <= n /\ p n)
+    ==> (?s. (!i j. snth s i <= snth s j <=> i <= j) /\
+             (!n. p n <=> (?i. snth s i = n)))</td>
+<td><a href="stream_51.html">link to proof</a></td>
+</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto;"><a href="index.html" style=" vertical-align: middle;"> Back to ProofCloud main page</a></div>
+</body>
+</html>

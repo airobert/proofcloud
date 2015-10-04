@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>natural-divides_136</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Name</td>
+<td>natural-divides_136</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Conclusion</td>
+<td>!a b.
+    egcd a b =
+    (if b = 0
+     then a,1,0
+     else let c = a MOD b in
+          if c = 0
+          then b,1,a DIV b - 1
+          else let g,s,t = egcd c (b MOD c) in
+               let u = s + b DIV c * t in g,u,t + a DIV b * u)</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Proof</td>
+<td>Yes</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Axiom</td>
+<td><pre>
+N|A</pre></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Classical Lemmas</td>
+<td>N|A</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Lemmas</td>
+<td><li>T</li><li>!x. x = x</li><li>!t. (!x. t) <=> t</li><li>!f y. (\x. f x) y = f y</li><li>!a b.
+    egcd a b =
+    (if b = 0
+     then a,1,0
+     else let c = a MOD b in
+          if c = 0
+          then b,1,a DIV b - 1
+          else let g,s,t = egcd c (b MOD c) in
+               let u = s + b DIV c * t in g,u,t + a DIV b * u)</li><li>T <=> (\p. p) = (\p. p)</li><li>LET_END = (\t. t)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>LET = (\f. f)</li><li>(!) = (\p. p = (\x. T))</li><li>NUMERAL = (\n. n)</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Contained Package</td>
+<td>natural-divides</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Comment</td>
+<td>Natural-divides package from OpenTheory.</td>
+
+	</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto;"><a href="natural-divides.html" class="pull-left">Back to main package page</a><a href="natural-divides.html" class="pull-right">Back to contained package page</a></div>
+</body>
+</html>
