@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>set-finite-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>46</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="EXISTS_FINITE_SUBSET_IMAGE.html">EXISTS_FINITE_SUBSET_IMAGE</a> : !p f s.
+    (?t. FINITE t /\ t SUBSET IMAGE f s /\ p t) <=>
+    (?t. FINITE t /\ t SUBSET s /\ p (IMAGE f t))</li><li><a href="EXISTS_FINITE_SUBSET_IMAGE_INJ.html">EXISTS_FINITE_SUBSET_IMAGE_INJ</a> : !p f s.
+    (?t. FINITE t /\ t SUBSET IMAGE f s /\ p t) <=>
+    (?t. FINITE t /\
+         t SUBSET s /\
+         (!x y. x IN t /\ y IN t /\ f x = f y ==> x = y) /\
+         p (IMAGE f t))</li><li><a href="FINITE_BOOL.html">FINITE_BOOL</a> : FINITE UNIV</li><li><a href="FINITE_CROSS.html">FINITE_CROSS</a> : !s t. FINITE s /\ FINITE t ==> FINITE (s CROSS t)</li><li><a href="FINITE_CROSS_EQ.html">FINITE_CROSS_EQ</a> : !s t. FINITE (s CROSS t) <=> s = {} \/ t = {} \/ FINITE s /\ FINITE t</li><li><a href="FINITE_DELETE.html">FINITE_DELETE</a> : !s x. FINITE (s DELETE x) <=> FINITE s</li><li><a href="FINITE_DELETE_IMP.html">FINITE_DELETE_IMP</a> : !s x. FINITE s ==> FINITE (s DELETE x)</li><li><a href="FINITE_DIFF.html">FINITE_DIFF</a> : !s t. FINITE s ==> FINITE (s DIFF t)</li><li><a href="FINITE_FINITE_PREIMAGE.html">FINITE_FINITE_PREIMAGE</a> : !f t.
+    FINITE t /\ (!y. y IN t ==> FINITE {x | f x = y})
+    ==> FINITE {x | f x IN t}</li><li><a href="FINITE_FINITE_PREIMAGE_GENERAL.html">FINITE_FINITE_PREIMAGE_GENERAL</a> : !f s t.
+    FINITE t /\ (!y. y IN t ==> FINITE {x | x IN s /\ f x = y})
+    ==> FINITE {x | x IN s /\ f x IN t}</li><li><a href="FINITE_FINITE_UNIONS.html">FINITE_FINITE_UNIONS</a> : !s. FINITE s ==> (FINITE (UNIONS s) <=> (!t. t IN s ==> FINITE t))</li><li><a href="FINITE_FUNSPACE.html">FINITE_FUNSPACE</a> : !d s t.
+    FINITE s /\ FINITE t
+    ==> FINITE {f | (!x. x IN s ==> f x IN t) /\ (!x. ~(x IN s) ==> f x = d)}</li><li><a href="FINITE_IMAGE.html">FINITE_IMAGE</a> : !f s. FINITE s ==> FINITE (IMAGE f s)</li><li><a href="FINITE_IMAGE_EXPAND.html">FINITE_IMAGE_EXPAND</a> : !f s. FINITE s ==> FINITE {y | ?x. x IN s /\ y = f x}</li><li><a href="FINITE_IMAGE_INJ.html">FINITE_IMAGE_INJ</a> : !f A. (!x y. f x = f y ==> x = y) /\ FINITE A ==> FINITE {x | f x IN A}</li><li><a href="FINITE_IMAGE_INJ_EQ.html">FINITE_IMAGE_INJ_EQ</a> : !f s.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y)
+    ==> (FINITE (IMAGE f s) <=> FINITE s)</li><li><a href="FINITE_IMAGE_INJ_GENERAL.html">FINITE_IMAGE_INJ_GENERAL</a> : !f t s.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y) /\ FINITE t
+    ==> FINITE {x | x IN s /\ f x IN t}</li><li><a href="FINITE_INDUCT_STRONG.html">FINITE_INDUCT_STRONG</a> : !p. p {} /\ (!x s. p s /\ ~(x IN s) /\ FINITE s ==> p (x INSERT s))
+    ==> (!s. FINITE s ==> p s)</li><li><a href="FINITE_INSERT.html">FINITE_INSERT</a> : !s x. FINITE (x INSERT s) <=> FINITE s</li><li><a href="FINITE_INTER.html">FINITE_INTER</a> : !s t. FINITE s \/ FINITE t ==> FINITE (s INTER t)</li><li><a href="FINITE_NUMSEG_LE.html">FINITE_NUMSEG_LE</a> : !n. FINITE {m | m <= n}</li><li><a href="FINITE_NUMSEG_LT.html">FINITE_NUMSEG_LT</a> : !n. FINITE {m | m < n}</li><li><a href="FINITE_POWERSET.html">FINITE_POWERSET</a> : !s. FINITE s ==> FINITE {t | t SUBSET s}</li><li><a href="FINITE_PRODUCT.html">FINITE_PRODUCT</a> : !s t. FINITE s /\ FINITE t ==> FINITE {x,y | x IN s /\ y IN t}</li><li><a href="FINITE_PRODUCT_DEPENDENT.html">FINITE_PRODUCT_DEPENDENT</a> : !f s t.
+    FINITE s /\ (!x. x IN s ==> FINITE (t x))
+    ==> FINITE {f x y | x IN s /\ y IN t x}</li><li><a href="FINITE_RESTRICT.html">FINITE_RESTRICT</a> : !s p. FINITE s ==> FINITE {x | x IN s /\ p x}</li><li><a href="FINITE_SING.html">FINITE_SING</a> : !a. FINITE {a}</li><li><a href="FINITE_SUBSET.html">FINITE_SUBSET</a> : !s t. FINITE t /\ s SUBSET t ==> FINITE s</li><li><a href="FINITE_SUBSET_IMAGE.html">FINITE_SUBSET_IMAGE</a> : !f s t.
+    FINITE t /\ t SUBSET IMAGE f s <=>
+    (?s'. FINITE s' /\ s' SUBSET s /\ t = IMAGE f s')</li><li><a href="FINITE_SUBSET_IMAGE_IMP.html">FINITE_SUBSET_IMAGE_IMP</a> : !f s t.
+    FINITE t /\ t SUBSET IMAGE f s
+    ==> (?s'. FINITE s' /\ s' SUBSET s /\ t SUBSET IMAGE f s')</li><li><a href="FINITE_TRANSITIVITY_CHAIN.html">FINITE_TRANSITIVITY_CHAIN</a> : !r s.
+    FINITE s /\
+    (!x. ~r x x) /\
+    (!x y z. r x y /\ r y z ==> r x z) /\
+    (!x. x IN s ==> (?y. y IN s /\ r x y))
+    ==> s = {}</li><li><a href="FINITE_UNION.html">FINITE_UNION</a> : !s t. FINITE (s UNION t) <=> FINITE s /\ FINITE t</li><li><a href="FINITE_UNIONS.html">FINITE_UNIONS</a> : !s. FINITE (UNIONS s) <=> FINITE s /\ (!t. t IN s ==> FINITE t)</li><li><a href="FINITE_UNION_IMP.html">FINITE_UNION_IMP</a> : !s t. FINITE s /\ FINITE t ==> FINITE (s UNION t)</li><li><a href="FORALL_FINITE_SUBSET_IMAGE.html">FORALL_FINITE_SUBSET_IMAGE</a> : !p f s.
+    (!t. FINITE t /\ t SUBSET IMAGE f s ==> p t) <=>
+    (!t. FINITE t /\ t SUBSET s ==> p (IMAGE f t))</li><li><a href="FORALL_FINITE_SUBSET_IMAGE_INJ.html">FORALL_FINITE_SUBSET_IMAGE_INJ</a> : !p f s.
+    (!t. FINITE t /\ t SUBSET IMAGE f s ==> p t) <=>
+    (!t. FINITE t /\
+         t SUBSET s /\
+         (!x y. x IN t /\ y IN t /\ f x = f y ==> x = y)
+         ==> p (IMAGE f t))</li><li><a href="INFINITE_DIFF_FINITE.html">INFINITE_DIFF_FINITE</a> : !s t. INFINITE s /\ FINITE t ==> INFINITE (s DIFF t)</li><li><a href="INFINITE_ENUMERATE.html">INFINITE_ENUMERATE</a> : !s. INFINITE s ==> (?r. (!m n. m < n ==> r m < r n) /\ IMAGE r UNIV = s)</li><li><a href="INFINITE_IMAGE_INJ.html">INFINITE_IMAGE_INJ</a> : !f s.
+    INFINITE s /\ (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y)
+    ==> INFINITE (IMAGE f s)</li><li><a href="INFINITE_IMAGE_INJ_EQ.html">INFINITE_IMAGE_INJ_EQ</a> : !f. (!x y. f x = f y ==> x = y) ==> (!s. INFINITE (IMAGE f s) <=> INFINITE s)</li><li><a href="INFINITE_NONEMPTY.html">INFINITE_NONEMPTY</a> : !s. INFINITE s ==> ~(s = {})</li><li><a href="INFINITE_SUPERSET.html">INFINITE_SUPERSET</a> : !s t. INFINITE s /\ s SUBSET t ==> INFINITE t</li><li><a href="UNIONS_MAXIMAL_SETS.html">UNIONS_MAXIMAL_SETS</a> : !f. FINITE f
+    ==> UNIONS {t | t IN f /\ (!u. u IN f ==> ~(t PSUBSET u))} = UNIONS f</li><li><a href="num_FINITE.html">num_FINITE</a> : !s. FINITE s <=> (?a. !x. x IN s ==> x <= a)</li><li><a href="num_FINITE_AVOID.html">num_FINITE_AVOID</a> : !s. FINITE s ==> (?a. ~(a IN s))</li><li><a href="num_INFINITE.html">num_INFINITE</a> : INFINITE UNIV</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

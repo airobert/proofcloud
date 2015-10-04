@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>natural-div-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>61</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="DIV_0.html">DIV_0</a> : !n. ~(n = 0) ==> 0 DIV n = 0</li><li><a href="DIV_1.html">DIV_1</a> : !n. n DIV 1 = n</li><li><a href="DIV_ADD_MOD.html">DIV_ADD_MOD</a> : !a b n.
+    ~(n = 0)
+    ==> ((a + b) MOD n = a MOD n + b MOD n <=>
+         (a + b) DIV n = a DIV n + b DIV n)</li><li><a href="DIV_DIV.html">DIV_DIV</a> : !m n p. ~(n * p = 0) ==> m DIV n DIV p = m DIV (n * p)</li><li><a href="DIV_EQ_0.html">DIV_EQ_0</a> : !m n. ~(n = 0) ==> (m DIV n = 0 <=> m < n)</li><li><a href="DIV_EQ_EXCLUSION.html">DIV_EQ_EXCLUSION</a> : !a b c d. b * c < (a + 1) * d /\ a * d < (c + 1) * b ==> a DIV b = c DIV d</li><li><a href="DIV_LE.html">DIV_LE</a> : !m n. ~(n = 0) ==> m DIV n <= m</li><li><a href="DIV_LE_EXCLUSION.html">DIV_LE_EXCLUSION</a> : !a b c d. ~(b = 0) /\ b * c < (a + 1) * d ==> c DIV d <= a DIV b</li><li><a href="DIV_LT.html">DIV_LT</a> : !m n. m < n ==> m DIV n = 0</li><li><a href="DIV_MOD.html">DIV_MOD</a> : !m n p. ~(n * p = 0) ==> (m DIV n) MOD p = (m MOD (n * p)) DIV n</li><li><a href="DIV_MONO.html">DIV_MONO</a> : !m n p. ~(p = 0) /\ m <= n ==> m DIV p <= n DIV p</li><li><a href="DIV_MONO2.html">DIV_MONO2</a> : !m n p. ~(p = 0) /\ p <= m ==> n DIV m <= n DIV p</li><li><a href="DIV_MONO_LT.html">DIV_MONO_LT</a> : !m n p. ~(p = 0) /\ m + p <= n ==> m DIV p < n DIV p</li><li><a href="DIV_MULT.html">DIV_MULT</a> : !m n. ~(m = 0) ==> (m * n) DIV m = n</li><li><a href="DIV_MULT2.html">DIV_MULT2</a> : !m n p. ~(m * p = 0) ==> (m * n) DIV (m * p) = n DIV p</li><li><a href="DIV_MULT_ADD.html">DIV_MULT_ADD</a> : !a b n. ~(n = 0) ==> (a * n + b) DIV n = a + b DIV n</li><li><a href="DIV_MUL_LE.html">DIV_MUL_LE</a> : !m n. n * m DIV n <= m</li><li><a href="DIV_REFL.html">DIV_REFL</a> : !n. ~(n = 0) ==> n DIV n = 1</li><li><a href="DIV_UNIQ.html">DIV_UNIQ</a> : !m n q r. m = q * n + r /\ r < n ==> m DIV n = q</li><li><a href="EVEN_ADD.html">EVEN_ADD</a> : !m n. EVEN (m + n) <=> EVEN m <=> EVEN n</li><li><a href="EVEN_AND_ODD.html">EVEN_AND_ODD</a> : !n. ~(EVEN n /\ ODD n)</li><li><a href="EVEN_DOUBLE.html">EVEN_DOUBLE</a> : !n. EVEN (2 * n)</li><li><a href="EVEN_EXISTS.html">EVEN_EXISTS</a> : !n. EVEN n <=> (?m. n = 2 * m)</li><li><a href="EVEN_MOD.html">EVEN_MOD</a> : !n. EVEN n <=> n MOD 2 = 0</li><li><a href="EVEN_MULT.html">EVEN_MULT</a> : !m n. EVEN (m * n) <=> EVEN m \/ EVEN n</li><li><a href="EVEN_OR_ODD.html">EVEN_OR_ODD</a> : !n. EVEN n \/ ODD n</li><li><a href="EVEN_SUB.html">EVEN_SUB</a> : !m n. n <= m ==> (EVEN (m - n) <=> EVEN m <=> EVEN n)</li><li><a href="LE_LDIV.html">LE_LDIV</a> : !a b n. ~(a = 0) /\ b <= a * n ==> b DIV a <= n</li><li><a href="LE_LDIV_EQ.html">LE_LDIV_EQ</a> : !a b n. ~(a = 0) ==> (b DIV a <= n <=> b < a * (n + 1))</li><li><a href="LE_RDIV_EQ.html">LE_RDIV_EQ</a> : !a b n. ~(a = 0) ==> (n <= b DIV a <=> a * n <= b)</li><li><a href="LT_LDIV.html">LT_LDIV</a> : !a b n. b < a * n ==> b DIV a < n</li><li><a href="LT_LDIV_EQ.html">LT_LDIV_EQ</a> : !a b n. ~(a = 0) ==> (b DIV a < n <=> b < a * n)</li><li><a href="MOD_0.html">MOD_0</a> : !n. ~(n = 0) ==> 0 MOD n = 0</li><li><a href="MOD_1.html">MOD_1</a> : !n. n MOD 1 = 0</li><li><a href="MOD_ADD_MOD'.html">MOD_ADD_MOD'</a> : !n a b. ~(n = 0) ==> (a MOD n + b MOD n) MOD n = (a + b) MOD n</li><li><a href="MOD_EQ.html">MOD_EQ</a> : !m n p q. m = n + q * p ==> m MOD p = n MOD p</li><li><a href="MOD_EQ_0.html">MOD_EQ_0</a> : !m n. ~(n = 0) ==> (m MOD n = 0 <=> (?q. m = q * n))</li><li><a href="MOD_EXISTS.html">MOD_EXISTS</a> : !m n. (?q. m = n * q) <=> (if n = 0 then m = 0 else m MOD n = 0)</li><li><a href="MOD_LE.html">MOD_LE</a> : !m n. ~(n = 0) ==> m MOD n <= m</li><li><a href="MOD_LT.html">MOD_LT</a> : !m n. m < n ==> m MOD n = m</li><li><a href="MOD_MOD.html">MOD_MOD</a> : !m n p. ~(n * p = 0) ==> m MOD (n * p) MOD n = m MOD n</li><li><a href="MOD_MOD_REFL'.html">MOD_MOD_REFL'</a> : !n m. ~(n = 0) ==> m MOD n MOD n = m MOD n</li><li><a href="MOD_MULT.html">MOD_MULT</a> : !m n. ~(m = 0) ==> (m * n) MOD m = 0</li><li><a href="MOD_MULT2.html">MOD_MULT2</a> : !m n p. ~(m * p = 0) ==> (m * n) MOD (m * p) = m * n MOD p</li><li><a href="MOD_MULT_ADD.html">MOD_MULT_ADD</a> : !m n p. (m * n + p) MOD n = p MOD n</li><li><a href="MOD_MULT_LMOD'.html">MOD_MULT_LMOD'</a> : !n m p. ~(n = 0) ==> (m MOD n * p) MOD n = (m * p) MOD n</li><li><a href="MOD_MULT_MOD2'.html">MOD_MULT_MOD2'</a> : !n m p. ~(n = 0) ==> (m MOD n * p MOD n) MOD n = (m * p) MOD n</li><li><a href="MOD_MULT_RMOD'.html">MOD_MULT_RMOD'</a> : !n m p. ~(n = 0) ==> (m * p MOD n) MOD n = (m * p) MOD n</li><li><a href="MOD_REFL.html">MOD_REFL</a> : !n. ~(n = 0) ==> n MOD n = 0</li><li><a href="MOD_UNIQ.html">MOD_UNIQ</a> : !m n q r. m = q * n + r /\ r < n ==> m MOD n = r</li><li><a href="MULT_DIV_LE.html">MULT_DIV_LE</a> : !m n p. ~(p = 0) ==> m * n DIV p <= (m * n) DIV p</li><li><a href="NOT_EVEN.html">NOT_EVEN</a> : !n. ~EVEN n <=> ODD n</li><li><a href="NOT_ODD.html">NOT_ODD</a> : !n. ~ODD n <=> EVEN n</li><li><a href="ODD_ADD.html">ODD_ADD</a> : !m n. ODD (m + n) <=> ~(ODD m <=> ODD n)</li><li><a href="ODD_DOUBLE.html">ODD_DOUBLE</a> : !n. ODD (SUC (2 * n))</li><li><a href="ODD_EXISTS.html">ODD_EXISTS</a> : !n. ODD n <=> (?m. n = SUC (2 * m))</li><li><a href="ODD_MOD.html">ODD_MOD</a> : !n. ODD n <=> n MOD 2 = 1</li><li><a href="ODD_MULT.html">ODD_MULT</a> : !m n. ODD (m * n) <=> ODD m /\ ODD n</li><li><a href="ODD_SUB.html">ODD_SUB</a> : !m n. n <= m ==> (ODD (m - n) <=> ~(ODD m <=> ODD n))</li><li><a href="SUC_INJ_MOD.html">SUC_INJ_MOD</a> : !n a b. ~(n = 0) ==> (SUC a MOD n = SUC b MOD n <=> a MOD n = b MOD n)</li><li><a href="div_induction.html">div_induction</a> : !k p. 1 < k /\ p 0 /\ (!n. ~(n = 0) /\ p (n DIV k) ==> p n) ==> (!n. p n)</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

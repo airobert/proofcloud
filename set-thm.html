@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>set-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>246</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="ABSORPTION.html">ABSORPTION</a> : !x s. x IN s <=> x INSERT s = s</li><li><a href="BIJECTIVE_LEFT_RIGHT_INVERSE.html">BIJECTIVE_LEFT_RIGHT_INVERSE</a> : !f. (!x y. f x = f y ==> x = y) /\ (!y. ?x. f x = y) <=>
+    (?g. (!y. f (g y) = y) /\ (!x. g (f x) = x))</li><li><a href="BIJECTIVE_ON_LEFT_RIGHT_INVERSE.html">BIJECTIVE_ON_LEFT_RIGHT_INVERSE</a> : !f s t.
+    (!x. x IN s ==> f x IN t)
+    ==> ((!x y. x IN s /\ y IN s /\ f x = f y ==> x = y) /\
+         (!y. y IN t ==> (?x. x IN s /\ f x = y)) <=>
+         (?g. (!y. y IN t ==> g y IN s) /\
+              (!y. y IN t ==> f (g y) = y) /\
+              (!x. x IN s ==> g (f x) = x)))</li><li><a href="COMPONENT.html">COMPONENT</a> : !x s. x IN x INSERT s</li><li><a href="CROSS_EMPTY.html">CROSS_EMPTY</a> : !s. s CROSS {} = {}</li><li><a href="CROSS_EQ_EMPTY.html">CROSS_EQ_EMPTY</a> : !s t. s CROSS t = {} <=> s = {} \/ t = {}</li><li><a href="CROSS_UNIV.html">CROSS_UNIV</a> : UNIV CROSS UNIV = UNIV</li><li><a href="DECOMPOSITION.html">DECOMPOSITION</a> : !s x. x IN s <=> (?t. s = x INSERT t /\ ~(x IN t))</li><li><a href="DELETE_COMM.html">DELETE_COMM</a> : !x y s. s DELETE x DELETE y = s DELETE y DELETE x</li><li><a href="DELETE_DELETE.html">DELETE_DELETE</a> : !x s. s DELETE x DELETE x = s DELETE x</li><li><a href="DELETE_DIFF_SING.html">DELETE_DIFF_SING</a> : !x s. s DIFF {x} = s DELETE x</li><li><a href="DELETE_INSERT.html">DELETE_INSERT</a> : !x y s.
+    (x INSERT s) DELETE y =
+    (if x = y then s DELETE y else x INSERT (s DELETE y))</li><li><a href="DELETE_INSERT_NON_ELEMENT.html">DELETE_INSERT_NON_ELEMENT</a> : !x s. (x INSERT s) DELETE x = s <=> ~(x IN s)</li><li><a href="DELETE_INTER.html">DELETE_INTER</a> : !s t x. s DELETE x INTER t = (s INTER t) DELETE x</li><li><a href="DELETE_NON_ELEMENT.html">DELETE_NON_ELEMENT</a> : !x s. s DELETE x = s <=> ~(x IN s)</li><li><a href="DELETE_SUBSET.html">DELETE_SUBSET</a> : !x s. s DELETE x SUBSET s</li><li><a href="DIFF_COMM.html">DIFF_COMM</a> : !t u s. s DIFF t DIFF u = s DIFF u DIFF t</li><li><a href="DIFF_DIFF.html">DIFF_DIFF</a> : !s t. s DIFF t DIFF t = s DIFF t</li><li><a href="DIFF_EMPTY.html">DIFF_EMPTY</a> : !s. s DIFF {} = s</li><li><a href="DIFF_EMPTY_SUBSET.html">DIFF_EMPTY_SUBSET</a> : !s t. s DIFF t = {} <=> s SUBSET t</li><li><a href="DIFF_EQ_EMPTY.html">DIFF_EQ_EMPTY</a> : !s. s DIFF s = {}</li><li><a href="DIFF_INSERT.html">DIFF_INSERT</a> : !s t x. s DIFF x INSERT t = s DELETE x DIFF t</li><li><a href="DIFF_INTERS.html">DIFF_INTERS</a> : !u s. u DIFF INTERS s = UNIONS {u DIFF t | t IN s}</li><li><a href="DIFF_SUBSET.html">DIFF_SUBSET</a> : !s t. s DIFF t SUBSET s</li><li><a href="DIFF_UNION.html">DIFF_UNION</a> : !t u s. s DIFF t DIFF u = s DIFF (t UNION u)</li><li><a href="DIFF_UNIONS.html">DIFF_UNIONS</a> : !u s. u DIFF UNIONS s = u INTER INTERS {u DIFF t | t IN s}</li><li><a href="DIFF_UNION_CANCEL.html">DIFF_UNION_CANCEL</a> : !s t. s DIFF t UNION t = s UNION t</li><li><a href="DIFF_UNION_SUBSET.html">DIFF_UNION_SUBSET</a> : !s t. t DIFF s UNION s = t <=> s SUBSET t</li><li><a href="DIFF_UNIV.html">DIFF_UNIV</a> : !s. s DIFF UNIV = {}</li><li><a href="DISJOINT_DELETE_SYM.html">DISJOINT_DELETE_SYM</a> : !s t x. DISJOINT (s DELETE x) t <=> DISJOINT (t DELETE x) s</li><li><a href="DISJOINT_DIFF.html">DISJOINT_DIFF</a> : !s t. s DIFF t = s <=> DISJOINT s t</li><li><a href="DISJOINT_DIFF1.html">DISJOINT_DIFF1</a> : !s t. DISJOINT (t DIFF s) s</li><li><a href="DISJOINT_DIFF2.html">DISJOINT_DIFF2</a> : !s t. DISJOINT s (t DIFF s)</li><li><a href="DISJOINT_EMPTY.html">DISJOINT_EMPTY</a> : !s. DISJOINT s {}</li><li><a href="DISJOINT_EMPTY_REFL.html">DISJOINT_EMPTY_REFL</a> : !s. DISJOINT s s <=> s = {}</li><li><a href="DISJOINT_INSERT.html">DISJOINT_INSERT</a> : !x s t. DISJOINT (x INSERT s) t <=> ~(x IN t) /\ DISJOINT s t</li><li><a href="DISJOINT_SING.html">DISJOINT_SING</a> : !x s. DISJOINT s {x} <=> ~(x IN s)</li><li><a href="DISJOINT_SYM.html">DISJOINT_SYM</a> : !s t. DISJOINT s t <=> DISJOINT t s</li><li><a href="DISJOINT_UNION.html">DISJOINT_UNION</a> : !s t u. DISJOINT (s UNION t) u <=> DISJOINT s u /\ DISJOINT t u</li><li><a href="DISJOINT_UNIONS.html">DISJOINT_UNIONS</a> : !s t. DISJOINT s (UNIONS t) <=> (!x. x IN t ==> DISJOINT s x)</li><li><a href="EMPTY_CROSS.html">EMPTY_CROSS</a> : !s. {} CROSS s = {}</li><li><a href="EMPTY_DELETE.html">EMPTY_DELETE</a> : !x. {} DELETE x = {}</li><li><a href="EMPTY_DIFF.html">EMPTY_DIFF</a> : !s. {} DIFF s = {}</li><li><a href="EMPTY_DISJOINT.html">EMPTY_DISJOINT</a> : !s. DISJOINT {} s</li><li><a href="EMPTY_FUNSPACE.html">EMPTY_FUNSPACE</a> : !d t.
+    {f | (!x. x IN {} ==> f x IN t) /\ (!x. ~(x IN {}) ==> f x = d)} =
+    {(\x. d)}</li><li><a href="EMPTY_GSPEC.html">EMPTY_GSPEC</a> : GSPEC (\x. F) = {}</li><li><a href="EMPTY_NUMSEG_LT.html">EMPTY_NUMSEG_LT</a> : {m | m < 0} = {}</li><li><a href="EMPTY_POWERSET.html">EMPTY_POWERSET</a> : {s | s SUBSET {}} = {{}}</li><li><a href="EMPTY_PRODUCT_DEPENDENT.html">EMPTY_PRODUCT_DEPENDENT</a> : !t. {x,y | x IN {} /\ y IN t x} = {}</li><li><a href="EMPTY_SUBSET.html">EMPTY_SUBSET</a> : !s. {} SUBSET s</li><li><a href="EMPTY_UNION.html">EMPTY_UNION</a> : !s t. s UNION t = {} <=> s = {} /\ t = {}</li><li><a href="EMPTY_UNIONS.html">EMPTY_UNIONS</a> : !s. UNIONS s = {} <=> (!t. t IN s ==> t = {})</li><li><a href="EQ_UNIV.html">EQ_UNIV</a> : !s. (!x. x IN s) <=> s = UNIV</li><li><a href="EXISTS_IN_GSPEC1.html">EXISTS_IN_GSPEC1</a> : !p f q. (?z. z IN {f x | p x} /\ q z) <=> (?x. p x /\ q (f x))</li><li><a href="EXISTS_IN_GSPEC2.html">EXISTS_IN_GSPEC2</a> : !p f q. (?z. z IN {f x y | p x y} /\ q z) <=> (?x y. p x y /\ q (f x y))</li><li><a href="EXISTS_IN_GSPEC3.html">EXISTS_IN_GSPEC3</a> : !p f q.
+    (?z. z IN {f w x y | p w x y} /\ q z) <=>
+    (?w x y. p w x y /\ q (f w x y))</li><li><a href="EXISTS_IN_IMAGE.html">EXISTS_IN_IMAGE</a> : !p f s. (?y. y IN IMAGE f s /\ p y) <=> (?x. x IN s /\ p (f x))</li><li><a href="EXISTS_IN_INSERT.html">EXISTS_IN_INSERT</a> : !p a s. (?x. x IN a INSERT s /\ p x) <=> p a \/ (?x. x IN s /\ p x)</li><li><a href="EXISTS_IN_UNION.html">EXISTS_IN_UNION</a> : !p s t.
+    (?x. x IN s UNION t /\ p x) <=>
+    (?x. x IN s /\ p x) \/ (?x. x IN t /\ p x)</li><li><a href="EXISTS_IN_UNIONS.html">EXISTS_IN_UNIONS</a> : !p s. (?x. x IN UNIONS s /\ p x) <=> (?t x. t IN s /\ x IN t /\ p x)</li><li><a href="EXISTS_SUBSET_IMAGE.html">EXISTS_SUBSET_IMAGE</a> : !p f s. (?t. t SUBSET IMAGE f s /\ p t) <=> (?t. t SUBSET s /\ p (IMAGE f t))</li><li><a href="EXISTS_SUBSET_IMAGE_INJ.html">EXISTS_SUBSET_IMAGE_INJ</a> : !p f s.
+    (?t. t SUBSET IMAGE f s /\ p t) <=>
+    (?t. t SUBSET s /\
+         (!x y. x IN t /\ y IN t /\ f x = f y ==> x = y) /\
+         p (IMAGE f t))</li><li><a href="EXISTS_SUBSET_INSERT.html">EXISTS_SUBSET_INSERT</a> : !p x t.
+    (?s. s SUBSET x INSERT t /\ p s) <=>
+    (?s. s SUBSET t /\ (p s \/ p (x INSERT s)))</li><li><a href="EXISTS_SUBSET_UNION.html">EXISTS_SUBSET_UNION</a> : !p t u.
+    (?s. s SUBSET t UNION u /\ p s) <=>
+    (?t' u'. t' SUBSET t /\ u' SUBSET u /\ p (t' UNION u'))</li><li><a href="EXTENSION'.html">EXTENSION'</a> : !s t. (!x. x IN s <=> x IN t) <=> s = t</li><li><a href="FORALL_IN_GSPEC1.html">FORALL_IN_GSPEC1</a> : !p f q. (!z. z IN {f x | p x} ==> q z) <=> (!x. p x ==> q (f x))</li><li><a href="FORALL_IN_GSPEC2.html">FORALL_IN_GSPEC2</a> : !p f q. (!z. z IN {f x y | p x y} ==> q z) <=> (!x y. p x y ==> q (f x y))</li><li><a href="FORALL_IN_GSPEC3.html">FORALL_IN_GSPEC3</a> : !p f q.
+    (!z. z IN {f w x y | p w x y} ==> q z) <=>
+    (!w x y. p w x y ==> q (f w x y))</li><li><a href="FORALL_IN_IMAGE.html">FORALL_IN_IMAGE</a> : !p f s. (!y. y IN IMAGE f s ==> p y) <=> (!x. x IN s ==> p (f x))</li><li><a href="FORALL_IN_IMAGE_2.html">FORALL_IN_IMAGE_2</a> : !p f s.
+    (!x y. x IN IMAGE f s /\ y IN IMAGE f s ==> p x y) <=>
+    (!x y. x IN s /\ y IN s ==> p (f x) (f y))</li><li><a href="FORALL_IN_INSERT.html">FORALL_IN_INSERT</a> : !p a s. (!x. x IN a INSERT s ==> p x) <=> p a /\ (!x. x IN s ==> p x)</li><li><a href="FORALL_IN_UNION.html">FORALL_IN_UNION</a> : !p s t.
+    (!x. x IN s UNION t ==> p x) <=>
+    (!x. x IN s ==> p x) /\ (!x. x IN t ==> p x)</li><li><a href="FORALL_IN_UNIONS.html">FORALL_IN_UNIONS</a> : !p s. (!x. x IN UNIONS s ==> p x) <=> (!t x. t IN s /\ x IN t ==> p x)</li><li><a href="FORALL_SUBSET_IMAGE.html">FORALL_SUBSET_IMAGE</a> : !p f s.
+    (!t. t SUBSET IMAGE f s ==> p t) <=> (!t. t SUBSET s ==> p (IMAGE f t))</li><li><a href="FORALL_SUBSET_IMAGE_INJ.html">FORALL_SUBSET_IMAGE_INJ</a> : !p f s.
+    (!t. t SUBSET IMAGE f s ==> p t) <=>
+    (!t. t SUBSET s /\ (!x y. x IN t /\ y IN t /\ f x = f y ==> x = y)
+         ==> p (IMAGE f t))</li><li><a href="FORALL_SUBSET_INSERT.html">FORALL_SUBSET_INSERT</a> : !p x t.
+    (!s. s SUBSET x INSERT t ==> p s) <=>
+    (!s. s SUBSET t ==> p s /\ p (x INSERT s))</li><li><a href="FORALL_SUBSET_UNION.html">FORALL_SUBSET_UNION</a> : !p t u.
+    (!s. s SUBSET t UNION u ==> p s) <=>
+    (!t' u'. t' SUBSET t /\ u' SUBSET u ==> p (t' UNION u'))</li><li><a href="FUN_IN_IMAGE.html">FUN_IN_IMAGE</a> : !f s x. x IN s ==> f x IN IMAGE f s</li><li><a href="IMAGE_CONST.html">IMAGE_CONST</a> : !s c. IMAGE (\x. c) s = (if s = {} then {} else {c})</li><li><a href="IMAGE_DELETE_INJ.html">IMAGE_DELETE_INJ</a> : !f s a.
+    (!x. f x = f a ==> x = a) ==> IMAGE f (s DELETE a) = IMAGE f s DELETE f a</li><li><a href="IMAGE_DIFF_INJ.html">IMAGE_DIFF_INJ</a> : !f s t.
+    (!x y. f x = f y ==> x = y)
+    ==> IMAGE f (s DIFF t) = IMAGE f s DIFF IMAGE f t</li><li><a href="IMAGE_EMPTY.html">IMAGE_EMPTY</a> : !f. IMAGE f {} = {}</li><li><a href="IMAGE_EQ_EMPTY.html">IMAGE_EQ_EMPTY</a> : !f s. IMAGE f s = {} <=> s = {}</li><li><a href="IMAGE_I.html">IMAGE_I</a> : !s. IMAGE I s = s</li><li><a href="IMAGE_ID.html">IMAGE_ID</a> : !s. IMAGE (\x. x) s = s</li><li><a href="IMAGE_INJECTIVE_IMAGE_OF_SUBSET.html">IMAGE_INJECTIVE_IMAGE_OF_SUBSET</a> : !f s.
+    ?t. t SUBSET s /\
+        IMAGE f s = IMAGE f t /\
+        (!x y. x IN t /\ y IN t /\ f x = f y ==> x = y)</li><li><a href="IMAGE_INSERT.html">IMAGE_INSERT</a> : !f x s. IMAGE f (x INSERT s) = f x INSERT IMAGE f s</li><li><a href="IMAGE_INTERS.html">IMAGE_INTERS</a> : !f s.
+    ~(s = {}) /\
+    (!x y. x IN UNIONS s /\ y IN UNIONS s /\ f x = f y ==> x = y)
+    ==> IMAGE f (INTERS s) = INTERS (IMAGE (IMAGE f) s)</li><li><a href="IMAGE_INTER_INJ.html">IMAGE_INTER_INJ</a> : !f s t.
+    (!x y. f x = f y ==> x = y)
+    ==> IMAGE f (s INTER t) = IMAGE f s INTER IMAGE f t</li><li><a href="IMAGE_POWERSET.html">IMAGE_POWERSET</a> : !s. {t | t SUBSET s} =
+    IMAGE (\p. {x | p x})
+    {p | (!x. x IN s ==> p x IN UNIV) /\ (!x. ~(x IN s) ==> (p x <=> F))}</li><li><a href="IMAGE_SING.html">IMAGE_SING</a> : !f x. IMAGE f {x} = {f x}</li><li><a href="IMAGE_SUBSET.html">IMAGE_SUBSET</a> : !f s t. s SUBSET t ==> IMAGE f s SUBSET IMAGE f t</li><li><a href="IMAGE_UNION.html">IMAGE_UNION</a> : !f s t. IMAGE f (s UNION t) = IMAGE f s UNION IMAGE f t</li><li><a href="IMAGE_UNIONS.html">IMAGE_UNIONS</a> : !f s. IMAGE f (UNIONS s) = UNIONS (IMAGE (IMAGE f) s)</li><li><a href="IMAGE_o.html">IMAGE_o</a> : !f g s. IMAGE (f o g) s = IMAGE f (IMAGE g s)</li><li><a href="INJECTIVE_IMAGE.html">INJECTIVE_IMAGE</a> : !f. (!s t. IMAGE f s = IMAGE f t ==> s = t) <=> (!x y. f x = f y ==> x = y)</li><li><a href="INJECTIVE_LEFT_INVERSE.html">INJECTIVE_LEFT_INVERSE</a> : !f. (!x y. f x = f y ==> x = y) <=> (?g. !x. g (f x) = x)</li><li><a href="INJECTIVE_ON_IMAGE.html">INJECTIVE_ON_IMAGE</a> : !f u.
+    (!s t. s SUBSET u /\ t SUBSET u /\ IMAGE f s = IMAGE f t ==> s = t) <=>
+    (!x y. x IN u /\ y IN u /\ f x = f y ==> x = y)</li><li><a href="INJECTIVE_ON_LEFT_INVERSE.html">INJECTIVE_ON_LEFT_INVERSE</a> : !f s.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y) <=>
+    (?g. !x. x IN s ==> g (f x) = x)</li><li><a href="INSERT_AC.html">INSERT_AC</a> : !x y s.
+    x INSERT y INSERT s = y INSERT x INSERT s /\
+    x INSERT x INSERT s = x INSERT s</li><li><a href="INSERT_BOOL.html">INSERT_BOOL</a> : UNIV = {T, F}</li><li><a href="INSERT_COMM.html">INSERT_COMM</a> : !x y s. x INSERT y INSERT s = y INSERT x INSERT s</li><li><a href="INSERT_DELETE.html">INSERT_DELETE</a> : !x s. x IN s ==> x INSERT (s DELETE x) = s</li><li><a href="INSERT_DIFF.html">INSERT_DIFF</a> : !s t x.
+    x INSERT s DIFF t = (if x IN t then s DIFF t else x INSERT (s DIFF t))</li><li><a href="INSERT_FUNSPACE.html">INSERT_FUNSPACE</a> : !d a s t.
+    {f | (!x. x IN a INSERT s ==> f x IN t) /\
+         (!x. ~(x IN a INSERT s) ==> f x = d)} =
+    IMAGE (\(b,g) x. if x = a then b else g x)
+    (t CROSS {f | (!x. x IN s ==> f x IN t) /\ (!x. ~(x IN s) ==> f x = d)})</li><li><a href="INSERT_INSERT.html">INSERT_INSERT</a> : !x s. x INSERT x INSERT s = x INSERT s</li><li><a href="INSERT_INTER.html">INSERT_INTER</a> : !x s t.
+    x INSERT s INTER t = (if x IN t then x INSERT (s INTER t) else s INTER t)</li><li><a href="INSERT_NUMSEG_LT.html">INSERT_NUMSEG_LT</a> : !n. {m | m < SUC n} = n INSERT {m | m < n}</li><li><a href="INSERT_NUMSEG_LT'.html">INSERT_NUMSEG_LT'</a> : !n. {m | m < SUC n} = 0 INSERT {SUC m | m < n}</li><li><a href="INSERT_POWERSET.html">INSERT_POWERSET</a> : !a t.
+    {s | s SUBSET a INSERT t} =
+    {s | s SUBSET t} UNION IMAGE (\s. a INSERT s) {s | s SUBSET t}</li><li><a href="INSERT_PRODUCT_DEPENDENT.html">INSERT_PRODUCT_DEPENDENT</a> : !s t a.
+    {x,y | x IN a INSERT s /\ y IN t x} =
+    IMAGE ((,) a) (t a) UNION {x,y | x IN s /\ y IN t x}</li><li><a href="INSERT_SUBSET.html">INSERT_SUBSET</a> : !x s t. x INSERT s SUBSET t <=> x IN t /\ s SUBSET t</li><li><a href="INSERT_UNION.html">INSERT_UNION</a> : !x s t.
+    x INSERT s UNION t = (if x IN t then s UNION t else x INSERT (s UNION t))</li><li><a href="INSERT_UNION_EQ.html">INSERT_UNION_EQ</a> : !x s t. x INSERT s UNION t = x INSERT (s UNION t)</li><li><a href="INSERT_UNION_SING.html">INSERT_UNION_SING</a> : !x s. {x} UNION s = x INSERT s</li><li><a href="INSERT_UNIV.html">INSERT_UNIV</a> : !x. x INSERT UNIV = UNIV</li><li><a href="INTERS_0.html">INTERS_0</a> : INTERS {} = UNIV</li><li><a href="INTERS_1.html">INTERS_1</a> : !s. INTERS {s} = s</li><li><a href="INTERS_2.html">INTERS_2</a> : !s t. INTERS {s, t} = s INTER t</li><li><a href="INTERS_GSPEC1.html">INTERS_GSPEC1</a> : !p f. INTERS {f x | p x} = {a | !x. p x ==> a IN f x}</li><li><a href="INTERS_GSPEC2.html">INTERS_GSPEC2</a> : !p f. INTERS {f x y | p x y} = {a | !x y. p x y ==> a IN f x y}</li><li><a href="INTERS_GSPEC3.html">INTERS_GSPEC3</a> : !p f. INTERS {f x y z | p x y z} = {a | !x y z. p x y z ==> a IN f x y z}</li><li><a href="INTERS_IMAGE.html">INTERS_IMAGE</a> : !f s. INTERS (IMAGE f s) = {y | !x. x IN s ==> y IN f x}</li><li><a href="INTERS_INSERT.html">INTERS_INSERT</a> : !s u. INTERS (s INSERT u) = s INTER INTERS u</li><li><a href="INTERS_OVER_UNIONS.html">INTERS_OVER_UNIONS</a> : !f s.
+    INTERS {UNIONS (f x) | x IN s} =
+    UNIONS {INTERS {g x | x IN s} | g | !x. x IN s ==> g x IN f x}</li><li><a href="INTERS_SUBSET.html">INTERS_SUBSET</a> : !u s. ~(u = {}) /\ (!t. t IN u ==> t SUBSET s) ==> INTERS u SUBSET s</li><li><a href="INTERS_SUBSET_INTERS.html">INTERS_SUBSET_INTERS</a> : !s t. s SUBSET t ==> INTERS t SUBSET INTERS s</li><li><a href="INTERS_UNION.html">INTERS_UNION</a> : !s t. INTERS (s UNION t) = INTERS s INTER INTERS t</li><li><a href="INTERS_UNIONS.html">INTERS_UNIONS</a> : !s. INTERS s = UNIV DIFF UNIONS {UNIV DIFF t | t IN s}</li><li><a href="INTER_ACI.html">INTER_ACI</a> : !p q r.
+    p INTER q = q INTER p /\
+    (p INTER q) INTER r = p INTER q INTER r /\
+    p INTER q INTER r = q INTER p INTER r /\
+    p INTER p = p /\
+    p INTER p INTER q = p INTER q</li><li><a href="INTER_ASSOC.html">INTER_ASSOC</a> : !s t u. (s INTER t) INTER u = s INTER t INTER u</li><li><a href="INTER_COMM.html">INTER_COMM</a> : !s t. s INTER t = t INTER s</li><li><a href="INTER_IDEMPOT.html">INTER_IDEMPOT</a> : !s. s INTER s = s</li><li><a href="INTER_LEFT_EMPTY.html">INTER_LEFT_EMPTY</a> : !s. {} INTER s = {}</li><li><a href="INTER_LEFT_UNIV.html">INTER_LEFT_UNIV</a> : !s. UNIV INTER s = s</li><li><a href="INTER_RIGHT_EMPTY.html">INTER_RIGHT_EMPTY</a> : !s. s INTER {} = {}</li><li><a href="INTER_RIGHT_UNIV.html">INTER_RIGHT_UNIV</a> : !s. s INTER UNIV = s</li><li><a href="INTER_UNIONS.html">INTER_UNIONS</a> : !s t. t INTER UNIONS s = UNIONS {t INTER x | x IN s}</li><li><a href="IN_CROSS.html">IN_CROSS</a> : !x y s t. x,y IN s CROSS t <=> x IN s /\ y IN t</li><li><a href="IN_DELETE.html">IN_DELETE</a> : !s x y. x IN s DELETE y <=> x IN s /\ ~(x = y)</li><li><a href="IN_DELETE_EQ.html">IN_DELETE_EQ</a> : !s x x'. (x IN s DELETE x' <=> x' IN s DELETE x) <=> x IN s <=> x' IN s</li><li><a href="IN_DELETE_SWAP.html">IN_DELETE_SWAP</a> : !s x x'. (x IN s <=> x' IN s) ==> (x IN s DELETE x' <=> x' IN s DELETE x)</li><li><a href="IN_DIFF.html">IN_DIFF</a> : !s t x. x IN s DIFF t <=> x IN s /\ ~(x IN t)</li><li><a href="IN_DISJOINT.html">IN_DISJOINT</a> : !s t. DISJOINT s t <=> ~(?x. x IN s /\ x IN t)</li><li><a href="IN_ELIM.html">IN_ELIM</a> : !p x. x IN {y | p y} <=> p x</li><li><a href="IN_ELIM_PAIR_THM.html">IN_ELIM_PAIR_THM</a> : !p a b. a,b IN {x,y | p x y} <=> p a b</li><li><a href="IN_IMAGE.html">IN_IMAGE</a> : !y s f. y IN IMAGE f s <=> (?x. y = f x /\ x IN s)</li><li><a href="IN_INSERT.html">IN_INSERT</a> : !x y s. x IN y INSERT s <=> x = y \/ x IN s</li><li><a href="IN_INTER.html">IN_INTER</a> : !s t x. x IN s INTER t <=> x IN s /\ x IN t</li><li><a href="IN_INTERS.html">IN_INTERS</a> : !s x. x IN INTERS s <=> (!t. t IN s ==> x IN t)</li><li><a href="IN_REST.html">IN_REST</a> : !x s. x IN REST s <=> x IN s /\ ~(x = CHOICE s)</li><li><a href="IN_SING.html">IN_SING</a> : !x y. x IN {y} <=> x = y</li><li><a href="IN_UNION.html">IN_UNION</a> : !s t x. x IN s UNION t <=> x IN s \/ x IN t</li><li><a href="IN_UNIONS.html">IN_UNIONS</a> : !s x. x IN UNIONS s <=> (?t. t IN s /\ x IN t)</li><li><a href="IN_UNIV.html">IN_UNIV</a> : !x. x IN UNIV</li><li><a href="LEFT_INTER_DISTRIB.html">LEFT_INTER_DISTRIB</a> : !s t u. s UNION t INTER u = (s UNION t) INTER (s UNION u)</li><li><a href="LEFT_INTER_SUBSET.html">LEFT_INTER_SUBSET</a> : !s t. s INTER t SUBSET s</li><li><a href="LEFT_UNION_DISTRIB.html">LEFT_UNION_DISTRIB</a> : !s t u. s INTER (t UNION u) = s INTER t UNION s INTER u</li><li><a href="LEFT_UNION_INTERS.html">LEFT_UNION_INTERS</a> : !s t. t UNION INTERS s = INTERS {t UNION x | x IN s}</li><li><a href="MEMBER_NOT_EMPTY.html">MEMBER_NOT_EMPTY</a> : !s. (?x. x IN s) <=> ~(s = {})</li><li><a href="NOT_EQUAL_SETS.html">NOT_EQUAL_SETS</a> : !s t. ~(s = t) <=> (?x. x IN t <=> ~(x IN s))</li><li><a href="NOT_INSERT_EMPTY.html">NOT_INSERT_EMPTY</a> : !x s. ~(x INSERT s = {})</li><li><a href="NOT_IN_EMPTY.html">NOT_IN_EMPTY</a> : !x. ~(x IN {})</li><li><a href="NOT_PSUBSET_EMPTY.html">NOT_PSUBSET_EMPTY</a> : !s. ~(s PSUBSET {})</li><li><a href="NOT_UNIV_PSUBSET.html">NOT_UNIV_PSUBSET</a> : !s. ~(UNIV PSUBSET s)</li><li><a href="PSUBSET_ALT.html">PSUBSET_ALT</a> : !s t. s PSUBSET t <=> s SUBSET t /\ (?a. a IN t /\ ~(a IN s))</li><li><a href="PSUBSET_INSERT_SUBSET.html">PSUBSET_INSERT_SUBSET</a> : !s t. s PSUBSET t <=> (?x. ~(x IN s) /\ x INSERT s SUBSET t)</li><li><a href="PSUBSET_IRREFL.html">PSUBSET_IRREFL</a> : !s. ~(s PSUBSET s)</li><li><a href="PSUBSET_NOT_SUBSET.html">PSUBSET_NOT_SUBSET</a> : !s t. s PSUBSET t <=> s SUBSET t /\ ~(t SUBSET s)</li><li><a href="PSUBSET_SUBSET.html">PSUBSET_SUBSET</a> : !s t. s PSUBSET t ==> s SUBSET t</li><li><a href="PSUBSET_SUBSET_TRANS.html">PSUBSET_SUBSET_TRANS</a> : !s t u. s PSUBSET t /\ t SUBSET u ==> s PSUBSET u</li><li><a href="PSUBSET_TRANS.html">PSUBSET_TRANS</a> : !s t u. s PSUBSET t /\ t PSUBSET u ==> s PSUBSET u</li><li><a href="PSUBSET_UNIV.html">PSUBSET_UNIV</a> : !s. s PSUBSET UNIV <=> (?x. ~(x IN s))</li><li><a href="RIGHT_INTER_DISTRIB.html">RIGHT_INTER_DISTRIB</a> : !s t u. s INTER t UNION u = (s UNION u) INTER (t UNION u)</li><li><a href="RIGHT_INTER_SUBSET.html">RIGHT_INTER_SUBSET</a> : !s t. t INTER s SUBSET s</li><li><a href="RIGHT_UNION_DISTRIB.html">RIGHT_UNION_DISTRIB</a> : !s t u. (s UNION t) INTER u = s INTER u UNION t INTER u</li><li><a href="RIGHT_UNION_INTERS.html">RIGHT_UNION_INTERS</a> : !s t. INTERS s UNION t = INTERS {x UNION t | x IN s}</li><li><a href="SET_CASES.html">SET_CASES</a> : !s. s = {} \/ (?x t. s = x INSERT t /\ ~(x IN t))</li><li><a href="SET_PAIR_THM.html">SET_PAIR_THM</a> : !p. {x | p x} = {a,b | p (a,b)}</li><li><a href="SET_PROVE_CASES.html">SET_PROVE_CASES</a> : !p. p {} /\ (!a s. ~(a IN s) ==> p (a INSERT s)) ==> (!s. p s)</li><li><a href="SIMPLE_IMAGE.html">SIMPLE_IMAGE</a> : !f s. {f x | x IN s} = IMAGE f s</li><li><a href="SIMPLE_IMAGE_GEN.html">SIMPLE_IMAGE_GEN</a> : !p f. {f x | p x} = IMAGE f {x | p x}</li><li><a href="SING_DISJOINT.html">SING_DISJOINT</a> : !x s. DISJOINT {x} s <=> ~(x IN s)</li><li><a href="SING_GSPEC1.html">SING_GSPEC1</a> : !a. {x | x = a} = {a}</li><li><a href="SING_SUBSET.html">SING_SUBSET</a> : !s x. {x} SUBSET s <=> x IN s</li><li><a href="SUBSET_ANTISYM.html">SUBSET_ANTISYM</a> : !s t. s SUBSET t /\ t SUBSET s ==> s = t</li><li><a href="SUBSET_ANTISYM_EQ.html">SUBSET_ANTISYM_EQ</a> : !s t. s SUBSET t /\ t SUBSET s <=> s = t</li><li><a href="SUBSET_DELETE.html">SUBSET_DELETE</a> : !x s t. s SUBSET t DELETE x <=> s SUBSET t /\ ~(x IN s)</li><li><a href="SUBSET_DIFF.html">SUBSET_DIFF</a> : !s t u. s SUBSET t DIFF u <=> s SUBSET t /\ DISJOINT s u</li><li><a href="SUBSET_DIFF_UNION.html">SUBSET_DIFF_UNION</a> : !s t u. s SUBSET t UNION u <=> s DIFF t SUBSET u</li><li><a href="SUBSET_EMPTY.html">SUBSET_EMPTY</a> : !s. s SUBSET {} <=> s = {}</li><li><a href="SUBSET_IMAGE.html">SUBSET_IMAGE</a> : !f s t. s SUBSET IMAGE f t <=> (?u. u SUBSET t /\ s = IMAGE f u)</li><li><a href="SUBSET_IMAGE_INJ.html">SUBSET_IMAGE_INJ</a> : !f s t.
+    s SUBSET IMAGE f t <=>
+    (?u. u SUBSET t /\
+         (!x y. x IN u /\ y IN u /\ f x = f y ==> x = y) /\
+         s = IMAGE f u)</li><li><a href="SUBSET_INSERT.html">SUBSET_INSERT</a> : !x s. ~(x IN s) ==> (!t. s SUBSET x INSERT t <=> s SUBSET t)</li><li><a href="SUBSET_INSERT_DELETE.html">SUBSET_INSERT_DELETE</a> : !x s t. s SUBSET x INSERT t <=> s DELETE x SUBSET t</li><li><a href="SUBSET_INSERT_IMP.html">SUBSET_INSERT_IMP</a> : !s t x. s SUBSET t ==> s SUBSET x INSERT t</li><li><a href="SUBSET_INTER.html">SUBSET_INTER</a> : !s t u. s SUBSET t INTER u <=> s SUBSET t /\ s SUBSET u</li><li><a href="SUBSET_INTERS.html">SUBSET_INTERS</a> : !t u. t SUBSET INTERS u <=> (!s. s IN u ==> t SUBSET s)</li><li><a href="SUBSET_INTER_ABSORPTION.html">SUBSET_INTER_ABSORPTION</a> : !s t. s SUBSET t <=> s INTER t = s</li><li><a href="SUBSET_LEFT_UNION.html">SUBSET_LEFT_UNION</a> : !s t. s SUBSET s UNION t</li><li><a href="SUBSET_PSUBSET_TRANS.html">SUBSET_PSUBSET_TRANS</a> : !s t u. s SUBSET t /\ t PSUBSET u ==> s PSUBSET u</li><li><a href="SUBSET_REFL.html">SUBSET_REFL</a> : !s. s SUBSET s</li><li><a href="SUBSET_RESTRICT.html">SUBSET_RESTRICT</a> : !s p. {x | x IN s /\ p x} SUBSET s</li><li><a href="SUBSET_RIGHT_UNION.html">SUBSET_RIGHT_UNION</a> : !s t. s SUBSET t UNION s</li><li><a href="SUBSET_SING.html">SUBSET_SING</a> : !s x. s SUBSET {x} <=> s = {} \/ s = {x}</li><li><a href="SUBSET_TRANS.html">SUBSET_TRANS</a> : !s t u. s SUBSET t /\ t SUBSET u ==> s SUBSET u</li><li><a href="SUBSET_UNIONS.html">SUBSET_UNIONS</a> : !f g. f SUBSET g ==> UNIONS f SUBSET UNIONS g</li><li><a href="SUBSET_UNION_ABSORPTION.html">SUBSET_UNION_ABSORPTION</a> : !s t. s SUBSET t <=> s UNION t = t</li><li><a href="SUBSET_UNION_DIFF.html">SUBSET_UNION_DIFF</a> : !s t u. s SUBSET t UNION u <=> s DIFF u SUBSET t</li><li><a href="SUBSET_UNIV.html">SUBSET_UNIV</a> : !s. s SUBSET UNIV</li><li><a href="SURJECTIVE_IMAGE.html">SURJECTIVE_IMAGE</a> : !f. (!t. ?s. IMAGE f s = t) <=> (!y. ?x. f x = y)</li><li><a href="SURJECTIVE_IMAGE_EQ.html">SURJECTIVE_IMAGE_EQ</a> : !f s t.
+    (!y. y IN t ==> (?x. f x = y)) /\ (!x. f x IN t <=> x IN s)
+    ==> IMAGE f s = t</li><li><a href="SURJECTIVE_IMAGE_THM.html">SURJECTIVE_IMAGE_THM</a> : !f. (!y. ?x. f x = y) <=> (!p. IMAGE f {x | p (f x)} = {x | p x})</li><li><a href="SURJECTIVE_ON_IMAGE.html">SURJECTIVE_ON_IMAGE</a> : !f u v.
+    (!t. t SUBSET v ==> (?s. s SUBSET u /\ IMAGE f s = t)) <=>
+    (!y. y IN v ==> (?x. x IN u /\ f x = y))</li><li><a href="SURJECTIVE_ON_RIGHT_INVERSE.html">SURJECTIVE_ON_RIGHT_INVERSE</a> : !f s t.
+    (!y. y IN t ==> (?x. x IN s /\ f x = y)) <=>
+    (?g. !y. y IN t ==> g y IN s /\ f (g y) = y)</li><li><a href="SURJECTIVE_RIGHT_INVERSE.html">SURJECTIVE_RIGHT_INVERSE</a> : !f. (!y. ?x. f x = y) <=> (?g. !y. f (g y) = y)</li><li><a href="UNIONS_0.html">UNIONS_0</a> : UNIONS {} = {}</li><li><a href="UNIONS_1.html">UNIONS_1</a> : !s. UNIONS {s} = s</li><li><a href="UNIONS_2.html">UNIONS_2</a> : !s t. UNIONS {s, t} = s UNION t</li><li><a href="UNIONS_DIFF.html">UNIONS_DIFF</a> : !s t. UNIONS s DIFF t = UNIONS {x DIFF t | x IN s}</li><li><a href="UNIONS_GSPEC1.html">UNIONS_GSPEC1</a> : !p f. UNIONS {f x | p x} = {a | ?x. p x /\ a IN f x}</li><li><a href="UNIONS_GSPEC2.html">UNIONS_GSPEC2</a> : !p f. UNIONS {f x y | p x y} = {a | ?x y. p x y /\ a IN f x y}</li><li><a href="UNIONS_GSPEC3.html">UNIONS_GSPEC3</a> : !p f. UNIONS {f x y z | p x y z} = {a | ?x y z. p x y z /\ a IN f x y z}</li><li><a href="UNIONS_IMAGE.html">UNIONS_IMAGE</a> : !f s. UNIONS (IMAGE f s) = {y | ?x. x IN s /\ y IN f x}</li><li><a href="UNIONS_INSERT.html">UNIONS_INSERT</a> : !s u. UNIONS (s INSERT u) = s UNION UNIONS u</li><li><a href="UNIONS_INTER.html">UNIONS_INTER</a> : !s t. UNIONS s INTER t = UNIONS {x INTER t | x IN s}</li><li><a href="UNIONS_INTERS.html">UNIONS_INTERS</a> : !s. UNIONS s = UNIV DIFF INTERS {UNIV DIFF t | t IN s}</li><li><a href="UNIONS_MONO.html">UNIONS_MONO</a> : !s t.
+    (!x. x IN s ==> (?y. y IN t /\ x SUBSET y)) ==> UNIONS s SUBSET UNIONS t</li><li><a href="UNIONS_OVER_INTERS.html">UNIONS_OVER_INTERS</a> : !f s.
+    UNIONS {INTERS (f x) | x IN s} =
+    INTERS {UNIONS {g x | x IN s} | g | !x. x IN s ==> g x IN f x}</li><li><a href="UNIONS_SUBSET.html">UNIONS_SUBSET</a> : !f t. UNIONS f SUBSET t <=> (!s. s IN f ==> s SUBSET t)</li><li><a href="UNIONS_UNION.html">UNIONS_UNION</a> : !s t. UNIONS (s UNION t) = UNIONS s UNION UNIONS t</li><li><a href="UNION_ACI.html">UNION_ACI</a> : !p q r.
+    p UNION q = q UNION p /\
+    (p UNION q) UNION r = p UNION q UNION r /\
+    p UNION q UNION r = q UNION p UNION r /\
+    p UNION p = p /\
+    p UNION p UNION q = p UNION q</li><li><a href="UNION_ASSOC.html">UNION_ASSOC</a> : !s t u. (s UNION t) UNION u = s UNION t UNION u</li><li><a href="UNION_COMM.html">UNION_COMM</a> : !s t. s UNION t = t UNION s</li><li><a href="UNION_DIFF_CANCEL.html">UNION_DIFF_CANCEL</a> : !s t. t UNION s DIFF t = t UNION s</li><li><a href="UNION_DIFF_SUBSET.html">UNION_DIFF_SUBSET</a> : !s t. s UNION t DIFF s = t <=> s SUBSET t</li><li><a href="UNION_IDEMPOT.html">UNION_IDEMPOT</a> : !s. s UNION s = s</li><li><a href="UNION_LEFT_EMPTY.html">UNION_LEFT_EMPTY</a> : !s. {} UNION s = s</li><li><a href="UNION_LEFT_UNIV.html">UNION_LEFT_UNIV</a> : !s. UNIV UNION s = UNIV</li><li><a href="UNION_RIGHT_EMPTY.html">UNION_RIGHT_EMPTY</a> : !s. s UNION {} = s</li><li><a href="UNION_RIGHT_UNIV.html">UNION_RIGHT_UNIV</a> : !s. s UNION UNIV = UNIV</li><li><a href="UNION_SUBSET.html">UNION_SUBSET</a> : !s t u. s UNION t SUBSET u <=> s SUBSET u /\ t SUBSET u</li><li><a href="UNIV_GSPEC.html">UNIV_GSPEC</a> : GSPEC (\x. T) = UNIV</li><li><a href="UNIV_INTERS.html">UNIV_INTERS</a> : !s. INTERS s = UNIV <=> (!t. t IN s ==> t = UNIV)</li><li><a href="UNIV_NOT_EMPTY.html">UNIV_NOT_EMPTY</a> : ~(UNIV = {})</li><li><a href="UNIV_SUBSET.html">UNIV_SUBSET</a> : !s. UNIV SUBSET s <=> s = UNIV</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

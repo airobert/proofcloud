@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>list-nth-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>8</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="all_nth.html">all_nth</a> : !p l. ALL p l <=> (!i. i < LENGTH l ==> p (nth l i))</li><li><a href="ex_nth.html">ex_nth</a> : !p l. EX p l <=> (?i. i < LENGTH l /\ p (nth l i))</li><li><a href="last_nth.html">last_nth</a> : !l. ~NULL l ==> nth l (LENGTH l - 1) = LAST l</li><li><a href="mem_nth.html">mem_nth</a> : !l x. MEM x l <=> (?i. i < LENGTH l /\ x = nth l i)</li><li><a href="nth_append.html">nth_append</a> : !l1 l2 k.
+    k < LENGTH l1 + LENGTH l2
+    ==> nth (APPEND l1 l2) k =
+        (if k < LENGTH l1 then nth l1 k else nth l2 (k - LENGTH l1))</li><li><a href="nth_eq.html">nth_eq</a> : !l1 l2.
+    LENGTH l1 = LENGTH l2 /\ (!i. i < LENGTH l1 ==> nth l1 i = nth l2 i)
+    ==> l1 = l2</li><li><a href="nth_map.html">nth_map</a> : !f l i. i < LENGTH l ==> nth (MAP f l) i = f (nth l i)</li><li><a href="set_of_list_nth.html">set_of_list_nth</a> : !l. set_of_list l = IMAGE (nth l) {i | i < LENGTH l}</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>list-take-drop-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>16</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="drop_add.html">drop_add</a> : !m n l. m + n <= LENGTH l ==> drop (m + n) l = drop m (drop n l)</li><li><a href="drop_append.html">drop_append</a> : !l1 l2. drop (LENGTH l1) (APPEND l1 l2) = l2</li><li><a href="drop_length.html">drop_length</a> : !l. drop (LENGTH l) l = []</li><li><a href="drop_replicate.html">drop_replicate</a> : !m n x. m <= n ==> drop m (REPLICATE x n) = REPLICATE x (n - m)</li><li><a href="length_drop.html">length_drop</a> : !n l. n <= LENGTH l ==> LENGTH (drop n l) = LENGTH l - n</li><li><a href="length_drop_add.html">length_drop_add</a> : !n l. n <= LENGTH l ==> n + LENGTH (drop n l) = LENGTH l</li><li><a href="length_take.html">length_take</a> : !n l. n <= LENGTH l ==> LENGTH (take n l) = n</li><li><a href="nth_drop.html">nth_drop</a> : !n l i. n + i < LENGTH l ==> nth (drop n l) i = nth l (n + i)</li><li><a href="nth_take.html">nth_take</a> : !n l i. n <= LENGTH l /\ i < n ==> nth (take n l) i = nth l i</li><li><a href="nth_take_drop.html">nth_take_drop</a> : !n l i.
+    n <= LENGTH l /\ i < LENGTH l
+    ==> nth l i =
+        (if i < n then nth (take n l) i else nth (drop n l) (i - n))</li><li><a href="take_add.html">take_add</a> : !m n l.
+    m + n <= LENGTH l
+    ==> take (m + n) l = APPEND (take m l) (take n (drop m l))</li><li><a href="take_append.html">take_append</a> : !l1 l2. take (LENGTH l1) (APPEND l1 l2) = l1</li><li><a href="take_drop.html">take_drop</a> : !n l. n <= LENGTH l ==> APPEND (take n l) (drop n l) = l</li><li><a href="take_length.html">take_length</a> : !l. take (LENGTH l) l = l</li><li><a href="take_one.html">take_one</a> : !h t. take 1 (CONS h t) = [h]</li><li><a href="take_replicate.html">take_replicate</a> : !m n x. m <= n ==> take m (REPLICATE x n) = REPLICATE x m</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

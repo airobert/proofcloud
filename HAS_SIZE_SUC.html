@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>HAS_SIZE_SUC</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Name</td>
+<td>HAS_SIZE_SUC</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Conclusion</td>
+<td>!s n.
+    s HAS_SIZE SUC n <=> ~(s = {}) /\ (!a. a IN s ==> s DELETE a HAS_SIZE n)</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Proof</td>
+<td>No</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Axiom</td>
+<td><pre>
+!t. t \/ ~t 
+(\a. a = (\b. (\c. c) = (\c. c))) (\d. (\e. d e) = d) 
+(\a. a = (\b. (\c. c) = (\c. c)))
+(\d. (\e. e = (\f. (\c. c) = (\c. c)))
+     (\g. (\h i.
+               (\j k.
+                    (\l. l j k) =
+                    (\m. m ((\c. c) = (\c. c)) ((\c. c) = (\c. c))))
+               h
+               i <=>
+               h)
+          (d g)
+          (d ((@) d)))) 
+(\a. (\b. b = (\c. (\d. d) = (\d. d)))
+     (\e. (\f g.
+               (\h i.
+                    (\j. j h i) =
+                    (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+               f
+               g <=>
+               f)
+          ((\l. l = (\m. (\d. d) = (\d. d)))
+          (\n. (\f g.
+                    (\h i.
+                         (\j. j h i) =
+                         (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                    f
+                    g <=>
+                    f)
+               (a n)
+               e))
+          e))
+(\p. (\h i. (\j. j h i) = (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+     ((\q. q = (\r. (\d. d) = (\d. d)))
+     (\s. (\q. q = (\r. (\d. d) = (\d. d)))
+          (\t. (\f g.
+                    (\h i.
+                         (\j. j h i) =
+                         (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                    f
+                    g <=>
+                    f)
+               (p s = p t)
+               (s = t))))
+     ((\u. (\f g.
+                (\h i.
+                     (\j. j h i) =
+                     (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                f
+                g <=>
+                f)
+           u
+           ((\b. b = (\c. (\d. d) = (\d. d))) (\d. d)))
+     ((\q. q = (\r. (\d. d) = (\d. d)))
+     (\v. (\w. (\b. b = (\c. (\d. d) = (\d. d)))
+               (\x. (\f g.
+                         (\h i.
+                              (\j. j h i) =
+                              (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                         f
+                         g <=>
+                         f)
+                    ((\q. q = (\r. (\d. d) = (\d. d)))
+                    (\y. (\f g.
+                              (\h i.
+                                   (\j. j h i) =
+                                   (\k. k ((\d. d) = (\d. d))
+                                        ((\d. d) = (\d. d))))
+                              f
+                              g <=>
+                              f)
+                         (w y)
+                         x))
+                    x))
+          (\z. v = p z)))))</pre></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Classical Lemmas</td>
+<td><li>!x y s. s DELETE x DELETE y = s DELETE y DELETE x</li><li>!x y s.
+    (x INSERT s) DELETE y =
+    (if x = y then s DELETE y else x INSERT (s DELETE y))</li><li>!e f. ?!fn. fn _0 = e /\ (!n. fn (SUC n) = f (fn n) n)</li><li>!x s t. s SUBSET x INSERT t <=> s DELETE x SUBSET t</li><li>!x s. ~(x INSERT s = {})</li><li>!x s. s DELETE x = s <=> ~(x IN s)</li><li>!x s. (x INSERT s) DELETE x = s <=> ~(x IN s)</li><li>!x s. DISJOINT s {x} <=> ~(x IN s)</li><li>!x s. DISJOINT {x} s <=> ~(x IN s)</li><li>!x s.
+    FINITE s ==> CARD (s DELETE x) = (if x IN s then CARD s - 1 else CARD s)</li><li>!x s.
+    FINITE s
+    ==> CARD (x INSERT s) = (if x IN s then CARD s else SUC (CARD s))</li><li>!x s. x IN s ==> x INSERT (s DELETE x) = s</li><li>!t1 t2. ~(t1 /\ t2) <=> ~t1 \/ ~t2</li><li>!t1 t2. ~(t1 ==> t2) <=> t1 /\ ~t2</li><li>!t1 t2. ~(t1 \/ t2) <=> ~t1 /\ ~t2</li><li>!t. ~ ~t <=> t</li><li>!t. (t <=> T) \/ (t <=> F)</li><li>!p c x y. p (if c then x else y) <=> (c ==> p x) /\ (~c ==> p y)</li><li>!p. (?x. ~p x) <=> ~(!x. p x)</li><li>!p. ~(!x. p x) <=> (?x. ~p x)</li><li>!p. ~(?x. p x) <=> (!x. ~p x)</li><li>!f b.
+    (!x y s. ~(x = y) ==> f x (f y s) = f y (f x s))
+    ==> ITSET f b {} = b /\
+        (!x s.
+             FINITE s
+             ==> ITSET f b (x INSERT s) =
+                 (if x IN s then ITSET f b s else f x (ITSET f b s)))</li><li>!p. p {} /\ (!x s. p s /\ ~(x IN s) /\ FINITE s ==> p (x INSERT s))
+    ==> (!s. FINITE s ==> p s)</li><li>!m n. SUC m = SUC n <=> m = n</li><li>!n. ~(SUC n = _0)</li><li>!n. BIT0 (SUC n) = SUC (SUC (BIT0 n))</li><li>!m. SUC m = m + 1</li><li>!n. SUC n - 1 = n</li><li>!m. m = 0 \/ (?n. m = SUC n)</li><li>!s x. FINITE (s DELETE x) <=> FINITE s</li><li>!s x. FINITE (x INSERT s) <=> FINITE s</li><li>!s x. FINITE s ==> FINITE (s DELETE x)</li><li>!s t u. s SUBSET t UNION u <=> s DIFF t SUBSET u</li><li>!t u s. s DIFF t DIFF u = s DIFF (t UNION u)</li><li>!t u s. s DIFF t DIFF u = s DIFF u DIFF t</li><li>!s t. ~(s = t) <=> (?x. x IN t <=> ~(x IN s))</li><li>!s t. s DIFF t = s <=> DISJOINT s t</li><li>!s t. FINITE t /\ s SUBSET t ==> FINITE s</li><li>!s. (?x. x IN s) <=> ~(s = {})</li><li>!s. FINITE s ==> (CARD s = 0 <=> s = {})</li><li>BIT0 0 = 0</li><li>CARD {} = 0</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Lemmas</td>
+<td><li>T</li><li>!x y s. x IN y INSERT s <=> x = y \/ x IN s</li><li>!x y s. s DELETE x DELETE y = s DELETE y DELETE x</li><li>!x y s.
+    (x INSERT s) DELETE y =
+    (if x = y then s DELETE y else x INSERT (s DELETE y))</li><li>!t1 t2. (if F then t1 else t2) = t2</li><li>!t1 t2. (if T then t1 else t2) = t1</li><li>!x y. x = y <=> y = x</li><li>!x y. x IN {y} <=> x = y</li><li>!x y. x = y ==> y = x</li><li>!e f. ?!fn. fn _0 = e /\ (!n. fn (SUC n) = f (fn n) n)</li><li>!x s t. s SUBSET x INSERT t <=> s DELETE x SUBSET t</li><li>!x s t. x INSERT s UNION t = x INSERT (s UNION t)</li><li>!x s. ~(x INSERT s = {})</li><li>!x s. s DELETE x = s <=> ~(x IN s)</li><li>!x s. (x INSERT s) DELETE x = s <=> ~(x IN s)</li><li>!x s. DISJOINT s {x} <=> ~(x IN s)</li><li>!x s. DISJOINT {x} s <=> ~(x IN s)</li><li>!x s. x IN s <=> x INSERT s = s</li><li>!x s. s DIFF {x} = s DELETE x</li><li>!x s. x INSERT s = {y | y = x \/ y IN s}</li><li>!x s. {x} UNION s = x INSERT s</li><li>!x s. FINITE s ==> FINITE (x INSERT s)</li><li>!x s.
+    FINITE s ==> CARD (s DELETE x) = (if x IN s then CARD s - 1 else CARD s)</li><li>!x s.
+    FINITE s
+    ==> CARD (x INSERT s) = (if x IN s then CARD s else SUC (CARD s))</li><li>!x s. x IN s ==> x INSERT (s DELETE x) = s</li><li>!x s. s DELETE x SUBSET s</li><li>!a. ?x. x = a</li><li>!a. ?!x. x = a</li><li>!x. ~(x IN {})</li><li>!x. x = x</li><li>!x. (@y. y = x) = x</li><li>!p1 p2 q1 q2. (p1 ==> p2) /\ (q1 ==> q2) ==> p1 /\ q1 ==> p2 /\ q2</li><li>!p1 p2 q1 q2. (p1 ==> p2) /\ (q1 ==> q2) ==> p1 \/ q1 ==> p2 \/ q2</li><li>!t1 t2 t3. (t1 /\ t2) /\ t3 <=> t1 /\ t2 /\ t3</li><li>!p q r. p ==> q ==> r <=> p /\ q ==> r</li><li>!t1 t2 t3. (t1 \/ t2) \/ t3 <=> t1 \/ t2 \/ t3</li><li>!t1 t2. ~(t1 /\ t2) <=> ~t1 \/ ~t2</li><li>!t1 t2. ~(t1 ==> t2) <=> t1 /\ ~t2</li><li>!t1 t2. ~(t1 \/ t2) <=> ~t1 /\ ~t2</li><li>!t1 t2. t1 /\ t2 <=> t2 /\ t1</li><li>!t1 t2. t1 \/ t2 <=> t2 \/ t1</li><li>!p q. (!x. p ==> q x) <=> p ==> (!x. q x)</li><li>!p q. (?x. p /\ q x) <=> p /\ (?x. q x)</li><li>!p q. p /\ (?x. q x) <=> (?x. p /\ q x)</li><li>!p q. p \/ (?x. q x) <=> (?x. p \/ q x)</li><li>!t. (!x. t) <=> t</li><li>!t. (?x. t) <=> t</li><li>!t. ~ ~t <=> t</li><li>!t. F /\ t <=> F</li><li>!t. T /\ t <=> t</li><li>!t. t /\ F <=> F</li><li>!t. t /\ T <=> t</li><li>!t. t /\ t <=> t</li><li>!t. (F <=> t) <=> ~t</li><li>!t. (T <=> t) <=> t</li><li>!t. (t <=> F) <=> ~t</li><li>!t. (t <=> T) <=> t</li><li>!t. F ==> t <=> T</li><li>!t. T ==> t <=> t</li><li>!t. t ==> F <=> ~t</li><li>!t. t ==> T <=> T</li><li>!t. F \/ t <=> t</li><li>!t. T \/ t <=> T</li><li>!t. t \/ F <=> t</li><li>!t. t \/ T <=> T</li><li>!t. t \/ t <=> t</li><li>!t. t ==> t</li><li>!t. (t <=> T) \/ (t <=> F)</li><li>!f y. (\x. f x) y = f y</li><li>!f g. (!x. f x = g x) <=> f = g</li><li>!f g. (!x. f x = g x) ==> f = g</li><li>!f. ONE_ONE f <=> (!x1 x2. f x1 = f x2 ==> x1 = x2)</li><li>!f. ONTO f <=> (!y. ?x. y = f x)</li><li>!t. (\x. t x) = t</li><li>!p a. (?x. a = x /\ p x) <=> p a</li><li>!p x. x IN GSPEC p <=> p x</li><li>!p x. x IN {y | p y} <=> p x</li><li>!p x. p x ==> p ((@) p)</li><li>!p c x y. p (if c then x else y) <=> (c ==> p x) /\ (~c ==> p y)</li><li>!p q. (?x. p x) ==> q <=> (!x. p x ==> q)</li><li>!p q. (?x. p x) \/ q <=> (?x. p x \/ q)</li><li>!p q. (!x. p x /\ q x) <=> (!x. p x) /\ (!x. q x)</li><li>!p q. (?x. p x \/ q x) <=> (?x. p x) \/ (?x. q x)</li><li>!p q. (?x. p x) \/ (?x. q x) <=> (?x. p x \/ q x)</li><li>!p q. (!x. p x ==> q x) ==> (?x. p x) ==> (?x. q x)</li><li>!p. (?x. ~p x) <=> ~(!x. p x)</li><li>!p. (?!x. p x) <=> (?x. !y. p y <=> x = y)</li><li>!p. (?!x. p x) <=> (?x. p x) /\ (!x x'. p x /\ p x' ==> x = x')</li><li>!p. ~(!x. p x) <=> (?x. ~p x)</li><li>!p. ~(?x. p x) <=> (!x. ~p x)</li><li>!f b.
+    (!x y s. ~(x = y) ==> f x (f y s) = f y (f x s))
+    ==> ITSET f b {} = b /\
+        (!x s.
+             FINITE s
+             ==> ITSET f b (x INSERT s) =
+                 (if x IN s then ITSET f b s else f x (ITSET f b s)))</li><li>!p. (!x y. p x y) <=> (!y x. p x y)</li><li>!r. (!x. ?y. r x y) <=> (?f. !x. r x (f x))</li><li>!p. (!x. ?!y. p x y) <=> (?f. !x y. p x y <=> f x = y)</li><li>!p. p _0 /\ (!n. p n ==> p (SUC n)) ==> (!n. p n)</li><li>!p. p {} /\ (!x s. p s ==> p (x INSERT s)) ==> (!a. FINITE a ==> p a)</li><li>!p. p {} /\ (!x s. p s /\ ~(x IN s) /\ FINITE s ==> p (x INSERT s))
+    ==> (!s. FINITE s ==> p s)</li><li>!m n. SUC m = SUC n <=> m = n</li><li>!m n. m + SUC n = SUC (m + n)</li><li>!m n. SUC m + n = SUC (m + n)</li><li>!m n. (m + n) - n = m</li><li>!n. ~(SUC n = _0)</li><li>!n. BIT0 (SUC n) = SUC (SUC (BIT0 n))</li><li>!n. BIT1 n = SUC (BIT0 n)</li><li>!n. PRE (SUC n) = n</li><li>!m. SUC m = m + 1</li><li>!m. m + 0 = m</li><li>!n. 0 + n = n</li><li>!n. SUC n - 1 = n</li><li>!m. m = 0 \/ (?n. m = SUC n)</li><li>!s x y. x IN s DELETE y <=> x IN s /\ ~(x = y)</li><li>!s x. FINITE (s DELETE x) <=> FINITE s</li><li>!s x. FINITE (x INSERT s) <=> FINITE s</li><li>!s x. s DELETE x = {y | y IN s /\ ~(y = x)}</li><li>!s x. FINITE s ==> FINITE (s DELETE x)</li><li>!s n. s HAS_SIZE n <=> FINITE s /\ CARD s = n</li><li>!s t x. x IN s DIFF t <=> x IN s /\ ~(x IN t)</li><li>!s t x. x IN s INTER t <=> x IN s /\ x IN t</li><li>!s t x. x IN s UNION t <=> x IN s \/ x IN t</li><li>!s t u. s SUBSET t UNION u <=> s DIFF t SUBSET u</li><li>!t u s. s DIFF t DIFF u = s DIFF (t UNION u)</li><li>!t u s. s DIFF t DIFF u = s DIFF u DIFF t</li><li>!s t. (!x. x IN s <=> x IN t) <=> s = t</li><li>!s t. ~(s = t) <=> (?x. x IN t <=> ~(x IN s))</li><li>!s t. s DIFF t = s <=> DISJOINT s t</li><li>!s t. DISJOINT s t <=> s INTER t = {}</li><li>!s t. DISJOINT s t <=> DISJOINT t s</li><li>!s t. s SUBSET t <=> (!x. x IN s ==> x IN t)</li><li>!s t. s DIFF t = {x | x IN s /\ ~(x IN t)}</li><li>!s t. s INTER t = {x | x IN s /\ x IN t}</li><li>!s t. s INTER t = t INTER s</li><li>!s t. s UNION t = {x | x IN s \/ x IN t}</li><li>!s t. s UNION t = t UNION s</li><li>!s t. (!x. x IN s <=> x IN t) ==> s = t</li><li>!s t. FINITE t /\ s SUBSET t ==> FINITE s</li><li>!s t. s SUBSET t UNION s</li><li>!s t. s SUBSET s UNION t</li><li>!s t. s DIFF t SUBSET s</li><li>!s. (?x. x IN s) <=> ~(s = {})</li><li>!s. s SUBSET {} <=> s = {}</li><li>!s. {} UNION s = s</li><li>!s. s UNION {} = s</li><li>!s. FINITE s ==> (CARD s = 0 <=> s = {})</li><li>?f. ONE_ONE f /\ ~ONTO f</li><li>FINITE {}</li><li>F <=> (!p. p)</li><li>T <=> (\p. p) = (\p. p)</li><li>~F <=> T</li><li>~T <=> F</li><li>(~) = (\p. p ==> F)</li><li>COND = (\t t1 t2. @x. ((t <=> T) ==> x = t1) /\ ((t <=> F) ==> x = t2))</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(\/) = (\p q. !r. (p ==> r) ==> (q ==> r) ==> r)</li><li>(!) = (\p. p = (\x. T))</li><li>(?) = (\p. !q. (!x. p x ==> q) ==> q)</li><li>(?) = (\p. p ((@) p))</li><li>(?!) = (\p. (?) p /\ (!x y. p x /\ p y ==> x = y))</li><li>NUMERAL = (\n. n)</li><li>CARD = ITSET (\x n. SUC n) 0</li><li>BIT0 0 = 0</li><li>CARD {} = 0</li><li>{} = {x | F}</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Contained Package</td>
+<td>set-size-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Author</td>
+<td>John Harrison</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Verifier</td>
+<td>Robert White</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Software</td>
+<td>OpenTheory + Holide2 + Dedukti</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Updated date</td>
+<td>25/06/2015</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Comment</td>
+<td>Standard HOL library retrieved from HOL Light & OpenTheory, with article files (*.art) generated by HOLALA</td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+<a href="set-size-thm.html">Back to contained package page</a></body>
+
+	</html>
+

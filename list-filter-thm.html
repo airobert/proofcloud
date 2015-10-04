@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>list-filter-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>7</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="ALL_FILTER.html">ALL_FILTER</a> : !p q l. ALL p (FILTER q l) <=> ALL (\x. q x ==> p x) l</li><li><a href="EX_FILTER.html">EX_FILTER</a> : !p q l. EX p (FILTER q l) <=> EX (\x. q x /\ p x) l</li><li><a href="FILTER_APPEND.html">FILTER_APPEND</a> : !p l1 l2. FILTER p (APPEND l1 l2) = APPEND (FILTER p l1) (FILTER p l2)</li><li><a href="FILTER_MAP.html">FILTER_MAP</a> : !p f l. FILTER p (MAP f l) = MAP f (FILTER (p o f) l)</li><li><a href="LENGTH_FILTER.html">LENGTH_FILTER</a> : !p l. LENGTH (FILTER p l) <= LENGTH l</li><li><a href="MEM_FILTER.html">MEM_FILTER</a> : !p l x. MEM x (FILTER p l) <=> MEM x l /\ p x</li><li><a href="SET_OF_LIST_FILTER.html">SET_OF_LIST_FILTER</a> : !p l. set_of_list (FILTER p l) = set_of_list l DIFF {x | ~p x}</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

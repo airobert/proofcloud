@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>natural-exp-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>25</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="EQ_EXP.html">EQ_EXP</a> : !x m n.
+    x EXP m = x EXP n <=> (if x = 0 then m = 0 <=> n = 0 else x = 1 \/ m = n)</li><li><a href="EVEN_EXP.html">EVEN_EXP</a> : !m n. EVEN (m EXP n) <=> EVEN m /\ ~(n = 0)</li><li><a href="EVEN_ODD_DECOMPOSITION.html">EVEN_ODD_DECOMPOSITION</a> : !n. (?k m. ODD m /\ n = 2 EXP k * m) <=> ~(n = 0)</li><li><a href="EXP_1.html">EXP_1</a> : !n. n EXP 1 = n</li><li><a href="EXP_2.html">EXP_2</a> : !n. n EXP 2 = n * n</li><li><a href="EXP_ADD.html">EXP_ADD</a> : !m n p. m EXP (n + p) = m EXP n * m EXP p</li><li><a href="EXP_EQ_0.html">EXP_EQ_0</a> : !m n. m EXP n = 0 <=> m = 0 /\ ~(n = 0)</li><li><a href="EXP_EQ_1.html">EXP_EQ_1</a> : !x n. x EXP n = 1 <=> x = 1 \/ n = 0</li><li><a href="EXP_LT_0.html">EXP_LT_0</a> : !n x. 0 < x EXP n <=> ~(x = 0) \/ n = 0</li><li><a href="EXP_MONO_EQ.html">EXP_MONO_EQ</a> : !x y n. x EXP n = y EXP n <=> x = y \/ n = 0</li><li><a href="EXP_MONO_LE.html">EXP_MONO_LE</a> : !x y n. x EXP n <= y EXP n <=> x <= y \/ n = 0</li><li><a href="EXP_MONO_LE_IMP.html">EXP_MONO_LE_IMP</a> : !x y n. x <= y ==> x EXP n <= y EXP n</li><li><a href="EXP_MONO_LT.html">EXP_MONO_LT</a> : !x y n. x EXP n < y EXP n <=> x < y /\ ~(n = 0)</li><li><a href="EXP_MONO_LT_IMP.html">EXP_MONO_LT_IMP</a> : !x y n. x < y /\ ~(n = 0) ==> x EXP n < y EXP n</li><li><a href="EXP_MULT.html">EXP_MULT</a> : !m n p. m EXP (n * p) = m EXP n EXP p</li><li><a href="EXP_ONE.html">EXP_ONE</a> : !n. 1 EXP n = 1</li><li><a href="EXP_ZERO.html">EXP_ZERO</a> : !n. 0 EXP n = (if n = 0 then 1 else 0)</li><li><a href="LE_EXP.html">LE_EXP</a> : !x m n.
+    x EXP m <= x EXP n <=>
+    (if x = 0 then m = 0 ==> n = 0 else x = 1 \/ m <= n)</li><li><a href="LT_EXP.html">LT_EXP</a> : !x m n. x EXP m < x EXP n <=> 2 <= x /\ m < n \/ x = 0 /\ ~(m = 0) /\ n = 0</li><li><a href="LT_POW2_REFL.html">LT_POW2_REFL</a> : !n. n < 2 EXP n</li><li><a href="MOD_EXP_MOD'.html">MOD_EXP_MOD'</a> : !n m p. ~(n = 0) ==> (m MOD n) EXP p MOD n = m EXP p MOD n</li><li><a href="MOD_MOD_EXP_MIN.html">MOD_MOD_EXP_MIN</a> : !x p m n. ~(p = 0) ==> x MOD p EXP m MOD p EXP n = x MOD p EXP MIN m n</li><li><a href="MULT_EXP.html">MULT_EXP</a> : !p m n. (m * n) EXP p = m EXP p * n EXP p</li><li><a href="ODD_EXP.html">ODD_EXP</a> : !m n. ODD (m EXP n) <=> ODD m \/ n = 0</li><li><a href="large_exp.html">large_exp</a> : !k n. 1 < k ==> (?m. n <= k EXP m)</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

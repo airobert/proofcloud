@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>relation-natural-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>18</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="MEASURE_LE.html">MEASURE_LE</a> : !m a b. (!y. MEASURE m y a ==> MEASURE m y b) <=> m a <= m b</li><li><a href="WF_DCHAIN.html">WF_DCHAIN</a> : !r. WF r <=> ~(?f. !n. r (f (SUC n)) (f n))</li><li><a href="WF_EREC.html">WF_EREC</a> : !r. WF r
+    ==> (!h. (!f g x. (!z. r z x ==> f z = g z) ==> h f x = h g x)
+             ==> (?!f. !x. f x = h f x))</li><li><a href="WF_FINITE.html">WF_FINITE</a> : !r. (!x. ~r x x) /\
+    (!x y z. r x y /\ r y z ==> r x z) /\
+    (!x. FINITE {y | r y x})
+    ==> WF r</li><li><a href="WF_MEASURE.html">WF_MEASURE</a> : !m. WF (MEASURE m)</li><li><a href="WF_REC.html">WF_REC</a> : !r. WF r
+    ==> (!h. (!f g x. (!z. r z x ==> f z = g z) ==> h f x = h g x)
+             ==> (?f. !x. f x = h f x))</li><li><a href="WF_REC_INVARIANT.html">WF_REC_INVARIANT</a> : !r. WF r
+    ==> (!h s.
+             (!f g x.
+                  (!z. r z x ==> f z = g z /\ s z (f z))
+                  ==> h f x = h g x /\ s x (h f x))
+             ==> (?f. !x. f x = h f x))</li><li><a href="WF_REC_TAIL.html">WF_REC_TAIL</a> : !p g h. ?f. !x. f x = (if p x then f (g x) else h x)</li><li><a href="WF_REC_WF.html">WF_REC_WF</a> : !r. (!h. (!f g x. (!z. r z x ==> f z = g z) ==> h f x = h g x)
+         ==> (?f. !x. f x = h f x))
+    ==> WF r</li><li><a href="WF_UREC.html">WF_UREC</a> : !r. WF r
+    ==> (!h. (!f g x. (!z. r z x ==> f z = g z) ==> h f x = h g x)
+             ==> (!f g. (!x. f x = h f x) /\ (!x. g x = h g x) ==> f = g))</li><li><a href="WF_UREC_WF.html">WF_UREC_WF</a> : !r. (!h. (!f g x. (!z. r z x ==> (f z <=> g z)) ==> (h f x <=> h g x))
+         ==> (!f g. (!x. f x <=> h f x) /\ (!x. g x <=> h g x) ==> f = g))
+    ==> WF r</li><li><a href="WF_num.html">WF_num</a> : WF (<)</li><li><a href="irreflexive_successor.html">irreflexive_successor</a> : irreflexive successor</li><li><a href="subrelation_successor_lt.html">subrelation_successor_lt</a> : subrelation successor (<)</li><li><a href="transitive_closure_successor_lt.html">transitive_closure_successor_lt</a> : transitive_closure successor = (<)</li><li><a href="transitive_lt.html">transitive_lt</a> : transitive (<)</li><li><a href="transitive_successor_lt.html">transitive_successor_lt</a> : !r. subrelation successor r /\ transitive r ==> subrelation (<) r</li><li><a href="wellfounded_successor.html">wellfounded_successor</a> : WF successor</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

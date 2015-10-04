@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>bool-class</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>41</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="BOOL_CASES_AX.html">BOOL_CASES_AX</a> : !t. (t <=> T) \/ (t <=> F)</li><li><a href="COND_ABS.html">COND_ABS</a> : !b f g. (\x. if b then f x else g x) = (if b then f else g)</li><li><a href="COND_ELIM_THM.html">COND_ELIM_THM</a> : !p c x y. p (if c then x else y) <=> (c ==> p x) /\ (~c ==> p y)</li><li><a href="COND_EXPAND.html">COND_EXPAND</a> : !b t1 t2. (if b then t1 else t2) <=> (~b \/ t1) /\ (b \/ t2)</li><li><a href="COND_FALSE.html">COND_FALSE</a> : !t1 t2. (if F then t1 else t2) = t2</li><li><a href="COND_ID.html">COND_ID</a> : !b t. (if b then t else t) = t</li><li><a href="COND_NOT.html">COND_NOT</a> : !c x y. (if ~c then x else y) = (if c then y else x)</li><li><a href="COND_RAND.html">COND_RAND</a> : !b f x y. f (if b then x else y) = (if b then f x else f y)</li><li><a href="COND_RATOR.html">COND_RATOR</a> : !b f g x. (if b then f else g) x = (if b then f x else g x)</li><li><a href="COND_TRUE.html">COND_TRUE</a> : !t1 t2. (if T then t1 else t2) = t1</li><li><a href="CONTRAPOS_THM.html">CONTRAPOS_THM</a> : !t1 t2. ~t1 ==> ~t2 <=> t2 ==> t1</li><li><a href="EXCLUDED_MIDDLE.html">EXCLUDED_MIDDLE</a> : !t. t \/ ~t</li><li><a href="EXISTS_BOOL_THM.html">EXISTS_BOOL_THM</a> : !p. (?b. p b) <=> p T \/ p F</li><li><a href="EXISTS_NOT_THM.html">EXISTS_NOT_THM</a> : !p. (?x. ~p x) <=> ~(!x. p x)</li><li><a href="EXISTS_THM.html">EXISTS_THM</a> : (?) = (\p. p ((@) p))</li><li><a href="FORALL_BOOL_THM.html">FORALL_BOOL_THM</a> : !p. (!b. p b) <=> p T /\ p F</li><li><a href="FORALL_NOT_THM.html">FORALL_NOT_THM</a> : !p. (!x. ~p x) <=> ~(?x. p x)</li><li><a href="LEFT_EXISTS_IMP_THM.html">LEFT_EXISTS_IMP_THM</a> : !p q. (?x. p x ==> q) <=> (!x. p x) ==> q</li><li><a href="LEFT_FORALL_OR_THM.html">LEFT_FORALL_OR_THM</a> : !p q. (!x. p x \/ q) <=> (!x. p x) \/ q</li><li><a href="LEFT_IMP_FORALL_THM.html">LEFT_IMP_FORALL_THM</a> : !p q. (!x. p x) ==> q <=> (?x. p x ==> q)</li><li><a href="LEFT_OR_FORALL_THM.html">LEFT_OR_FORALL_THM</a> : !p q. (!x. p x) \/ q <=> (!x. p x \/ q)</li><li><a href="MONO_COND.html">MONO_COND</a> : !b p q r s.
+    (p ==> q) /\ (r ==> s) ==> (if b then p else r) ==> (if b then q else s)</li><li><a href="NOT_AND_THM.html">NOT_AND_THM</a> : !t1 t2. ~(t1 /\ t2) <=> ~t1 \/ ~t2</li><li><a href="NOT_EXISTS_THM.html">NOT_EXISTS_THM</a> : !p. ~(?x. p x) <=> (!x. ~p x)</li><li><a href="NOT_FORALL_THM.html">NOT_FORALL_THM</a> : !p. ~(!x. p x) <=> (?x. ~p x)</li><li><a href="NOT_IFF_THM.html">NOT_IFF_THM</a> : !t1 t2. (~t1 <=> ~t2) <=> t1 <=> t2</li><li><a href="NOT_IMP.html">NOT_IMP</a> : !t1 t2. ~(t1 ==> t2) <=> t1 /\ ~t2</li><li><a href="NOT_NOT_THM.html">NOT_NOT_THM</a> : !t. ~ ~t <=> t</li><li><a href="NOT_OR_THM.html">NOT_OR_THM</a> : !t1 t2. ~(t1 \/ t2) <=> ~t1 /\ ~t2</li><li><a href="RIGHT_EXISTS_IMP_THM.html">RIGHT_EXISTS_IMP_THM</a> : !p q. (?x. p ==> q x) <=> p ==> (?x. q x)</li><li><a href="RIGHT_FORALL_OR_THM.html">RIGHT_FORALL_OR_THM</a> : !p q. (!x. p \/ q x) <=> p \/ (!x. q x)</li><li><a href="RIGHT_IMP_EXISTS_THM.html">RIGHT_IMP_EXISTS_THM</a> : !p q. p ==> (?x. q x) <=> (?x. p ==> q x)</li><li><a href="RIGHT_OR_FORALL_THM.html">RIGHT_OR_FORALL_THM</a> : !p q. p \/ (!x. q x) <=> (!x. p \/ q x)</li><li><a href="SELECT_REFL.html">SELECT_REFL</a> : !x. (@y. y = x) = x</li><li><a href="SELECT_UNIQUE.html">SELECT_UNIQUE</a> : !p x. (!y. p y <=> y = x) ==> (@) p = x</li><li><a href="SKOLEM_THM.html">SKOLEM_THM</a> : !r. (!x. ?y. r x y) <=> (?f. !x. r x (f x))</li><li><a href="SKOLEM_THM_GEN.html">SKOLEM_THM_GEN</a> : !p r. (!x. p x ==> (?y. r x y)) <=> (?f. !x. p x ==> r x (f x))</li><li><a href="UNIQUE_SKOLEM_ALT.html">UNIQUE_SKOLEM_ALT</a> : !p. (!x. ?!y. p x y) <=> (?f. !x y. p x y <=> f x = y)</li><li><a href="UNIQUE_SKOLEM_THM.html">UNIQUE_SKOLEM_THM</a> : !p. (!x. ?!y. p x y) <=> (?!f. !x. p x (f x))</li><li><a href="bool_INDUCT.html">bool_INDUCT</a> : !p. p F /\ p T ==> (!x. p x)</li><li><a href="bool_RECURSION.html">bool_RECURSION</a> : !a b. ?f. f F = a /\ f T = b</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>set-size-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>68</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="BIJECTIONS_CARD_EQ.html">BIJECTIONS_CARD_EQ</a> : !s t f g.
+    (FINITE s \/ FINITE t) /\
+    (!x. x IN s ==> f x IN t /\ g (f x) = x) /\
+    (!y. y IN t ==> g y IN s /\ f (g y) = y)
+    ==> CARD s = CARD t</li><li><a href="BIJECTIONS_HAS_SIZE.html">BIJECTIONS_HAS_SIZE</a> : !s t f g n.
+    (!x. x IN s ==> f x IN t /\ g (f x) = x) /\
+    (!y. y IN t ==> g y IN s /\ f (g y) = y) /\
+    s HAS_SIZE n
+    ==> t HAS_SIZE n</li><li><a href="BIJECTIONS_HAS_SIZE_EQ.html">BIJECTIONS_HAS_SIZE_EQ</a> : !s t f g.
+    (!x. x IN s ==> f x IN t /\ g (f x) = x) /\
+    (!y. y IN t ==> g y IN s /\ f (g y) = y)
+    ==> (!n. s HAS_SIZE n <=> t HAS_SIZE n)</li><li><a href="CARD_CROSS.html">CARD_CROSS</a> : !s t. FINITE s /\ FINITE t ==> CARD (s CROSS t) = CARD s * CARD t</li><li><a href="CARD_DELETE.html">CARD_DELETE</a> : !x s.
+    FINITE s ==> CARD (s DELETE x) = (if x IN s then CARD s - 1 else CARD s)</li><li><a href="CARD_DIFF.html">CARD_DIFF</a> : !s t. FINITE s /\ t SUBSET s ==> CARD (s DIFF t) = CARD s - CARD t</li><li><a href="CARD_EMPTY.html">CARD_EMPTY</a> : CARD {} = 0</li><li><a href="CARD_EQ_0.html">CARD_EQ_0</a> : !s. FINITE s ==> (CARD s = 0 <=> s = {})</li><li><a href="CARD_EQ_BIJECTION.html">CARD_EQ_BIJECTION</a> : !s t.
+    FINITE s /\ FINITE t /\ CARD s = CARD t
+    ==> (?f. (!x. x IN s ==> f x IN t) /\
+             (!y. y IN t ==> (?x. x IN s /\ f x = y)) /\
+             (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y))</li><li><a href="CARD_EQ_BIJECTIONS.html">CARD_EQ_BIJECTIONS</a> : !s t.
+    FINITE s /\ FINITE t /\ CARD s = CARD t
+    ==> (?f g.
+             (!x. x IN s ==> f x IN t /\ g (f x) = x) /\
+             (!y. y IN t ==> g y IN s /\ f (g y) = y))</li><li><a href="CARD_FUNSPACE.html">CARD_FUNSPACE</a> : !d s t.
+    FINITE s /\ FINITE t
+    ==> CARD {f | (!x. x IN s ==> f x IN t) /\ (!x. ~(x IN s) ==> f x = d)} =
+        CARD t EXP CARD s</li><li><a href="CARD_FUNSPACE_UNIV.html">CARD_FUNSPACE_UNIV</a> : FINITE UNIV /\ FINITE UNIV ==> CARD UNIV = CARD UNIV EXP CARD UNIV</li><li><a href="CARD_IMAGE_EQ_INJ.html">CARD_IMAGE_EQ_INJ</a> : !f s.
+    FINITE s
+    ==> (CARD (IMAGE f s) = CARD s <=>
+         (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y))</li><li><a href="CARD_IMAGE_INJ.html">CARD_IMAGE_INJ</a> : !f s.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y) /\ FINITE s
+    ==> CARD (IMAGE f s) = CARD s</li><li><a href="CARD_IMAGE_INJ_EQ.html">CARD_IMAGE_INJ_EQ</a> : !f s t.
+    FINITE s /\
+    (!x. x IN s ==> f x IN t) /\
+    (!y. y IN t ==> (?!x. x IN s /\ f x = y))
+    ==> CARD t = CARD s</li><li><a href="CARD_IMAGE_LE.html">CARD_IMAGE_LE</a> : !f s. FINITE s ==> CARD (IMAGE f s) <= CARD s</li><li><a href="CARD_INSERT.html">CARD_INSERT</a> : !x s.
+    FINITE s
+    ==> CARD (x INSERT s) = (if x IN s then CARD s else SUC (CARD s))</li><li><a href="CARD_LE_INJ.html">CARD_LE_INJ</a> : !s t.
+    FINITE s /\ FINITE t /\ CARD s <= CARD t
+    ==> (?f. IMAGE f s SUBSET t /\
+             (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y))</li><li><a href="CARD_NUMSEG_LE.html">CARD_NUMSEG_LE</a> : !n. CARD {m | m <= n} = n + 1</li><li><a href="CARD_NUMSEG_LT.html">CARD_NUMSEG_LT</a> : !n. CARD {m | m < n} = n</li><li><a href="CARD_POWERSET.html">CARD_POWERSET</a> : !s. FINITE s ==> CARD {t | t SUBSET s} = 2 EXP CARD s</li><li><a href="CARD_PRODUCT.html">CARD_PRODUCT</a> : !s t.
+    FINITE s /\ FINITE t ==> CARD {x,y | x IN s /\ y IN t} = CARD s * CARD t</li><li><a href="CARD_PSUBSET.html">CARD_PSUBSET</a> : !a b. a PSUBSET b /\ FINITE b ==> CARD a < CARD b</li><li><a href="CARD_SING.html">CARD_SING</a> : !x. CARD {x} = 1</li><li><a href="CARD_SUBSET.html">CARD_SUBSET</a> : !a b. a SUBSET b /\ FINITE b ==> CARD a <= CARD b</li><li><a href="CARD_SUBSET_EQ.html">CARD_SUBSET_EQ</a> : !a b. FINITE b /\ a SUBSET b /\ CARD a = CARD b ==> a = b</li><li><a href="CARD_SUBSET_IMAGE.html">CARD_SUBSET_IMAGE</a> : !f s t. FINITE t /\ s SUBSET IMAGE f t ==> CARD s <= CARD t</li><li><a href="CARD_SUBSET_LE.html">CARD_SUBSET_LE</a> : !a b. FINITE b /\ a SUBSET b /\ CARD b <= CARD a ==> a = b</li><li><a href="CARD_UNION.html">CARD_UNION</a> : !s t.
+    FINITE s /\ FINITE t /\ DISJOINT s t
+    ==> CARD (s UNION t) = CARD s + CARD t</li><li><a href="CARD_UNIONS_LE.html">CARD_UNIONS_LE</a> : !s t m n.
+    s HAS_SIZE m /\ (!x. x IN s ==> FINITE (t x) /\ CARD (t x) <= n)
+    ==> CARD (UNIONS {t x | x IN s}) <= m * n</li><li><a href="CARD_UNION_DIFF.html">CARD_UNION_DIFF</a> : !s t. FINITE s /\ FINITE t ==> CARD (s UNION t) = CARD s + CARD (t DIFF s)</li><li><a href="CARD_UNION_EQ.html">CARD_UNION_EQ</a> : !s t u.
+    FINITE u /\ DISJOINT s t /\ s UNION t = u ==> CARD s + CARD t = CARD u</li><li><a href="CARD_UNION_GEN.html">CARD_UNION_GEN</a> : !s t.
+    FINITE s /\ FINITE t
+    ==> CARD (s UNION t) = (CARD s + CARD t) - CARD (s INTER t)</li><li><a href="CARD_UNION_INTER.html">CARD_UNION_INTER</a> : !s t.
+    FINITE s /\ FINITE t
+    ==> CARD (s UNION t) + CARD (s INTER t) = CARD s + CARD t</li><li><a href="CARD_UNION_LE.html">CARD_UNION_LE</a> : !s t. FINITE s /\ FINITE t ==> CARD (s UNION t) <= CARD s + CARD t</li><li><a href="CARD_UNION_OVERLAP.html">CARD_UNION_OVERLAP</a> : !s t.
+    FINITE s /\ FINITE t /\ CARD (s UNION t) < CARD s + CARD t
+    ==> ~DISJOINT s t</li><li><a href="CARD_UNION_OVERLAP_EQ.html">CARD_UNION_OVERLAP_EQ</a> : !s t.
+    FINITE s /\ FINITE t
+    ==> (CARD (s UNION t) = CARD s + CARD t <=> DISJOINT s t)</li><li><a href="CHOOSE_SUBSET.html">CHOOSE_SUBSET</a> : !s n. FINITE s /\ n <= CARD s ==> (?t. t SUBSET s /\ t HAS_SIZE n)</li><li><a href="CHOOSE_SUBSET_BETWEEN.html">CHOOSE_SUBSET_BETWEEN</a> : !n s u.
+    s SUBSET u /\ FINITE s /\ CARD s <= n /\ (FINITE u ==> n <= CARD u)
+    ==> (?t. s SUBSET t /\ t SUBSET u /\ t HAS_SIZE n)</li><li><a href="CHOOSE_SUBSET_STRONG.html">CHOOSE_SUBSET_STRONG</a> : !s n. (FINITE s ==> n <= CARD s) ==> (?t. t SUBSET s /\ t HAS_SIZE n)</li><li><a href="FINITE_FUNSPACE_UNIV.html">FINITE_FUNSPACE_UNIV</a> : FINITE UNIV /\ FINITE UNIV ==> FINITE UNIV</li><li><a href="FINITE_HAS_SIZE.html">FINITE_HAS_SIZE</a> : !s. FINITE s <=> s HAS_SIZE CARD s</li><li><a href="FINITE_INDUCT_DELETE.html">FINITE_INDUCT_DELETE</a> : !p. p {} /\
+    (!s. FINITE s /\ ~(s = {}) ==> (?x. x IN s /\ (p (s DELETE x) ==> p s)))
+    ==> (!s. FINITE s ==> p s)</li><li><a href="HAS_SIZE_0.html">HAS_SIZE_0</a> : !s. s HAS_SIZE 0 <=> s = {}</li><li><a href="HAS_SIZE_BOOL.html">HAS_SIZE_BOOL</a> : UNIV HAS_SIZE 2</li><li><a href="HAS_SIZE_CARD.html">HAS_SIZE_CARD</a> : !s n. s HAS_SIZE n ==> CARD s = n</li><li><a href="HAS_SIZE_CROSS.html">HAS_SIZE_CROSS</a> : !s t m n. s HAS_SIZE m /\ t HAS_SIZE n ==> s CROSS t HAS_SIZE m * n</li><li><a href="HAS_SIZE_DIFF.html">HAS_SIZE_DIFF</a> : !s t m n.
+    s HAS_SIZE m /\ t HAS_SIZE n /\ t SUBSET s ==> s DIFF t HAS_SIZE m - n</li><li><a href="HAS_SIZE_FUNSPACE.html">HAS_SIZE_FUNSPACE</a> : !d s t m n.
+    s HAS_SIZE m /\ t HAS_SIZE n
+    ==> {f | (!x. x IN s ==> f x IN t) /\ (!x. ~(x IN s) ==> f x = d)} HAS_SIZE
+        n EXP m</li><li><a href="HAS_SIZE_FUNSPACE_UNIV.html">HAS_SIZE_FUNSPACE_UNIV</a> : !m n. UNIV HAS_SIZE m /\ UNIV HAS_SIZE n ==> UNIV HAS_SIZE n EXP m</li><li><a href="HAS_SIZE_IMAGE_INJ.html">HAS_SIZE_IMAGE_INJ</a> : !f s n.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y) /\ s HAS_SIZE n
+    ==> IMAGE f s HAS_SIZE n</li><li><a href="HAS_SIZE_IMAGE_INJ_EQ.html">HAS_SIZE_IMAGE_INJ_EQ</a> : !f s n.
+    (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y)
+    ==> (IMAGE f s HAS_SIZE n <=> s HAS_SIZE n)</li><li><a href="HAS_SIZE_INDEX.html">HAS_SIZE_INDEX</a> : !s n.
+    s HAS_SIZE n
+    ==> (?f. (!m. m < n ==> f m IN s) /\
+             (!x. x IN s ==> (?!m. m < n /\ f m = x)))</li><li><a href="HAS_SIZE_INSERT.html">HAS_SIZE_INSERT</a> : !s n.
+    s HAS_SIZE SUC n <=> (?a t. t HAS_SIZE n /\ ~(a IN t) /\ s = a INSERT t)</li><li><a href="HAS_SIZE_NUMSEG_LE.html">HAS_SIZE_NUMSEG_LE</a> : !n. {m | m <= n} HAS_SIZE n + 1</li><li><a href="HAS_SIZE_NUMSEG_LT.html">HAS_SIZE_NUMSEG_LT</a> : !n. {m | m < n} HAS_SIZE n</li><li><a href="HAS_SIZE_POWERSET.html">HAS_SIZE_POWERSET</a> : !s n. s HAS_SIZE n ==> {t | t SUBSET s} HAS_SIZE 2 EXP n</li><li><a href="HAS_SIZE_PRODUCT.html">HAS_SIZE_PRODUCT</a> : !s t m n.
+    s HAS_SIZE m /\ t HAS_SIZE n ==> {x,y | x IN s /\ y IN t} HAS_SIZE m * n</li><li><a href="HAS_SIZE_PRODUCT_DEPENDENT.html">HAS_SIZE_PRODUCT_DEPENDENT</a> : !s t m n.
+    s HAS_SIZE m /\ (!x. x IN s ==> t x HAS_SIZE n)
+    ==> {x,y | x IN s /\ y IN t x} HAS_SIZE m * n</li><li><a href="HAS_SIZE_SING.html">HAS_SIZE_SING</a> : !x. {x} HAS_SIZE 1</li><li><a href="HAS_SIZE_SUC.html">HAS_SIZE_SUC</a> : !s n.
+    s HAS_SIZE SUC n <=> ~(s = {}) /\ (!a. a IN s ==> s DELETE a HAS_SIZE n)</li><li><a href="HAS_SIZE_UNION.html">HAS_SIZE_UNION</a> : !s t m n.
+    s HAS_SIZE m /\ t HAS_SIZE n /\ DISJOINT s t ==> s UNION t HAS_SIZE m + n</li><li><a href="HAS_SIZE_UNIONS.html">HAS_SIZE_UNIONS</a> : !s t m n.
+    s HAS_SIZE m /\
+    (!x. x IN s ==> t x HAS_SIZE n) /\
+    (!x y. x IN s /\ y IN s /\ ~(x = y) ==> DISJOINT (t x) (t y))
+    ==> UNIONS {t x | x IN s} HAS_SIZE m * n</li><li><a href="IMAGE_IMP_INJECTIVE.html">IMAGE_IMP_INJECTIVE</a> : !s f.
+    FINITE s /\ IMAGE f s = s
+    ==> (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y)</li><li><a href="IMAGE_IMP_INJECTIVE_GEN.html">IMAGE_IMP_INJECTIVE_GEN</a> : !s t f.
+    FINITE s /\ CARD s = CARD t /\ IMAGE f s = t
+    ==> (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y)</li><li><a href="SUBSET_CARD_EQ.html">SUBSET_CARD_EQ</a> : !s t. FINITE t /\ s SUBSET t ==> (CARD s = CARD t <=> s = t)</li><li><a href="SURJECTIVE_IFF_INJECTIVE.html">SURJECTIVE_IFF_INJECTIVE</a> : !s f.
+    FINITE s /\ IMAGE f s SUBSET s
+    ==> ((!y. y IN s ==> (?x. x IN s /\ f x = y)) <=>
+         (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y))</li><li><a href="SURJECTIVE_IFF_INJECTIVE_GEN.html">SURJECTIVE_IFF_INJECTIVE_GEN</a> : !s t f.
+    FINITE s /\ FINITE t /\ CARD s = CARD t /\ IMAGE f s SUBSET t
+    ==> ((!y. y IN t ==> (?x. x IN s /\ f x = y)) <=>
+         (!x y. x IN s /\ y IN s /\ f x = f y ==> x = y))</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+
+	<html>
+
+	<head>
+
+	<style>
+
+	table, th, td {
+
+	    border: 1px solid black;
+
+	    border-collapse: collapse;
+
+	}
+
+	th, td {
+
+	    padding: 5px;
+
+	}
+
+	</style>
+
+	<title>hol_stdlib</title>
+	</head>
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table style="width:100%">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Package Name</td>
+<td>pair-thm</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Count</td>
+<td>20</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Theorems</td>
+<td><li><a href="CHOICE_PAIRED_THM.html">CHOICE_PAIRED_THM</a> : !p q. (?a b. p a b) /\ (!a b. p a b ==> q (a,b)) ==> q (@(a,b). p a b)</li><li><a href="CHOICE_UNPAIR_THM.html">CHOICE_UNPAIR_THM</a> : !p. (@(a,b). p a b) = (@x. p (FST x) (SND x))</li><li><a href="EXISTS_CURRY.html">EXISTS_CURRY</a> : !p. (?f. p f) <=> (?f. p (\(a,b). f a b))</li><li><a href="EXISTS_PAIRED_THM.html">EXISTS_PAIRED_THM</a> : !p. (?(a,b). p a b) <=> (?a b. p a b)</li><li><a href="EXISTS_PAIR_THM.html">EXISTS_PAIR_THM</a> : !p. (?x. p x) <=> (?a b. p (a,b))</li><li><a href="EXISTS_TRIPLED_THM.html">EXISTS_TRIPLED_THM</a> : !p. (?(a,b,c). p a b c) <=> (?a b c. p a b c)</li><li><a href="EXISTS_UNCURRY.html">EXISTS_UNCURRY</a> : !p. (?f. p f) <=> (?f. p (\a b. f (a,b)))</li><li><a href="EXISTS_UNPAIR_THM.html">EXISTS_UNPAIR_THM</a> : !p. (?x y. p x y) <=> (?z. p (FST z) (SND z))</li><li><a href="FORALL_CURRY.html">FORALL_CURRY</a> : !p. (!f. p f) <=> (!f. p (\(a,b). f a b))</li><li><a href="FORALL_PAIRED_THM.html">FORALL_PAIRED_THM</a> : !p. (!(a,b). p a b) <=> (!a b. p a b)</li><li><a href="FORALL_PAIR_THM.html">FORALL_PAIR_THM</a> : !p. (!x. p x) <=> (!a b. p (a,b))</li><li><a href="FORALL_TRIPLED_THM.html">FORALL_TRIPLED_THM</a> : !p. (!(a,b,c). p a b c) <=> (!a b c. p a b c)</li><li><a href="FORALL_UNCURRY.html">FORALL_UNCURRY</a> : !p. (!f. p f) <=> (!f. p (\a b. f (a,b)))</li><li><a href="FORALL_UNPAIR_THM.html">FORALL_UNPAIR_THM</a> : !p. (!x y. p x y) <=> (!z. p (FST z) (SND z))</li><li><a href="LAMBDA_PAIR_THM.html">LAMBDA_PAIR_THM</a> : !f. (\x. f x) = (\(a,b). f (a,b))</li><li><a href="LAMBDA_UNPAIR_THM.html">LAMBDA_UNPAIR_THM</a> : !f. (\(x,y). f x y) = (\p. f (FST p) (SND p))</li><li><a href="PAIR.html">PAIR</a> : !x. FST x,SND x = x</li><li><a href="PAIRED_ETA_THM.html">PAIRED_ETA_THM</a> : (!f. (\(a,b). f (a,b)) = f) /\
+(!f. (\(a,b,c). f (a,b,c)) = f) /\
+(!f. (\(a,b,c,d). f (a,b,c,d)) = f)</li><li><a href="pair_INDUCT.html">pair_INDUCT</a> : !p. (!a b. p (a,b)) ==> (!x. p x)</li><li><a href="pair_RECURSION.html">pair_RECURSION</a> : !f. ?fn. !a b. fn (a,b) = f a b</li></td>
+
+	</tr>
+</table>
+<a href="hol_stdlib.html">Back to main package page</a></body>
+
+	</html>
+
