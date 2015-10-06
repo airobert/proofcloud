@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>natural-fibonacci</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<ul style="list-style-type:none"><li>Package Name: natural-fibonacci</li><li>Author: Joe Leslie-Hurd</li><li><a href="natural-fibonacci_packages.html">Sub Packages</a>
+</li><li><a href="natural-fibonacci_verification.html">Verification Results</a>
+</li><li>Date Retrieved: 04/10/2015</li><li>Total number of proofs: 46</li><li>Among them, there are 22 constructive proofs and 24 classical proofs, which means 47.83% of them are constructive proofs.</li><li>Classical proofs have an average size of 1.00 (up to lemma). Constructive proofs have an average size of 1.00 (up to lemma).</li><li>Comment: Probability package from OpenTheory.</li></ul> <table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	  	<th>Name</th>
+
+	    <th>Conclusion</th>
+
+	    <th>Link</th>
+ <tr>
+
+	<td>
+natural-fibonacci_1</td>
+<td>
+zeckendorf []</td>
+<td><a href="natural-fibonacci_1.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_2</td>
+<td>
+fibonaccis = stream fibonacci</td>
+<td><a href="natural-fibonacci_2.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_3</td>
+<td>
+fibonacci 0 = 0</td>
+<td><a href="natural-fibonacci_3.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_4</td>
+<td>
+decode_fib [] = 0</td>
+<td><a href="natural-fibonacci_4.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_5</td>
+<td>
+encode_fib 0 = []</td>
+<td><a href="natural-fibonacci_5.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_6</td>
+<td>
+!n. zeckendorf (encode_fib n)</td>
+<td><a href="natural-fibonacci_6.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_7</td>
+<td>
+decode_fib = decode_fib_dest 1 0</td>
+<td><a href="natural-fibonacci_7.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_8</td>
+<td>
+fibonacci 1 = 1</td>
+<td><a href="natural-fibonacci_8.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_9</td>
+<td>
+!n. decode_fib (encode_fib n) = n</td>
+<td><a href="natural-fibonacci_9.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_10</td>
+<td>
+!n. ?k. n <= fibonacci k</td>
+<td><a href="natural-fibonacci_10.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_11</td>
+<td>
+fibonacci 2 = 1</td>
+<td><a href="natural-fibonacci_11.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_12</td>
+<td>
+!n. snth fibonaccis n = fibonacci n</td>
+<td><a href="natural-fibonacci_12.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_13</td>
+<td>
+encode_fib = (\n. encode_fib_find n 1 0)</td>
+<td><a href="natural-fibonacci_13.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_14</td>
+<td>
+!n. NULL (encode_fib n) <=> n = 0</td>
+<td><a href="natural-fibonacci_14.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_15</td>
+<td>
+!f p. decode_fib_dest f p [] = 0</td>
+<td><a href="natural-fibonacci_15.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_16</td>
+<td>
+!n. encode_fib n = encode_fib_find n 1 0</td>
+<td><a href="natural-fibonacci_16.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_17</td>
+<td>
+!k. fibonacci k = 0 <=> k = 0</td>
+<td><a href="natural-fibonacci_17.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_18</td>
+<td>
+!l. zeckendorf l <=> encode_fib (decode_fib l) = l</td>
+<td><a href="natural-fibonacci_18.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_19</td>
+<td>
+!l. decode_fib l = decode_fib_dest 1 0 l</td>
+<td><a href="natural-fibonacci_19.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_20</td>
+<td>
+!h t. zeckendorf (CONS h t) ==> zeckendorf t</td>
+<td><a href="natural-fibonacci_20.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_21</td>
+<td>
+!j k. j <= k ==> fibonacci j <= fibonacci k</td>
+<td><a href="natural-fibonacci_21.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_22</td>
+<td>
+!j k. fibonacci j < fibonacci k ==> j < k</td>
+<td><a href="natural-fibonacci_22.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_23</td>
+<td>
+!k. fibonacci (SUC (SUC k)) = fibonacci (SUC k) + fibonacci k</td>
+<td><a href="natural-fibonacci_23.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_24</td>
+<td>
+!j. ~(j = 1) ==> fibonacci j < fibonacci (SUC j)</td>
+<td><a href="natural-fibonacci_24.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_25</td>
+<td>
+!r. random_fib r = random_fib_dest F 0 1 0 r - 1</td>
+<td><a href="natural-fibonacci_25.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_26</td>
+<td>
+!n. ?k. fibonacci k <= n /\ n < fibonacci (k + 1)</td>
+<td><a href="natural-fibonacci_26.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_27</td>
+<td>
+!n. fibonacci (n + 2) = fibonacci (n + 1) + fibonacci n</td>
+<td><a href="natural-fibonacci_27.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_28</td>
+<td>
+!l. ~NULL l /\ zeckendorf l ==> fibonacci (LENGTH l + 1) <= decode_fib l</td>
+<td><a href="natural-fibonacci_28.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_29</td>
+<td>
+!l1 l2.
+    zeckendorf (APPEND l1 l2) ==> decode_fib l1 < fibonacci (LENGTH l1 + 2)</td>
+<td><a href="natural-fibonacci_29.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_30</td>
+<td>
+!l1 l2.
+    zeckendorf l1 /\ zeckendorf l2 /\ decode_fib l1 = decode_fib l2
+    ==> l1 = l2</td>
+<td><a href="natural-fibonacci_30.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_31</td>
+<td>
+!h t.
+    zeckendorf (CONS h t) <=>
+    (if NULL t then h else ~(h /\ HD t) /\ zeckendorf t)</td>
+<td><a href="natural-fibonacci_31.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_32</td>
+<td>
+!l1 l2.
+    zeckendorf l1 /\ zeckendorf l2 /\ LENGTH l1 < LENGTH l2
+    ==> decode_fib l1 < decode_fib l2</td>
+<td><a href="natural-fibonacci_32.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_33</td>
+<td>
+!f r.
+    random_fib_list f r =
+    (let r1,r2 = split_random r in random_vector f (random_fib r1) r2)</td>
+<td><a href="natural-fibonacci_33.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_34</td>
+<td>
+fibonaccis = sunfold (\(p,f). p,f,p + f) (0,1)</td>
+<td><a href="natural-fibonacci_34.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_35</td>
+<td>
+!j k. ~(j = 1 /\ k = 2) /\ j < k ==> fibonacci j < fibonacci k</td>
+<td><a href="natural-fibonacci_35.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_36</td>
+<td>
+!j k. ~(j = 2 /\ k = 1) /\ fibonacci j <= fibonacci k ==> j <= k</td>
+<td><a href="natural-fibonacci_36.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_37</td>
+<td>
+(zeckendorf [] <=> T) /\
+(!h t.
+     zeckendorf (CONS h t) <=>
+     (if NULL t then h else ~(h /\ HD t) /\ zeckendorf t))</td>
+<td><a href="natural-fibonacci_37.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_38</td>
+<td>
+!n f p.
+    encode_fib_find n f p =
+    (let s = f + p in
+     if n < s then encode_fib_mk [] n f p else encode_fib_find n s f)</td>
+<td><a href="natural-fibonacci_38.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_39</td>
+<td>
+!f p h t.
+    decode_fib_dest f p (CONS h t) =
+    (let s = f + p in
+     let n = decode_fib_dest s f t in if h then s + n else n)</td>
+<td><a href="natural-fibonacci_39.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_40</td>
+<td>
+!j k.
+    fibonacci (j + k + 1) =
+    fibonacci j * fibonacci k + fibonacci (j + 1) * fibonacci (k + 1)</td>
+<td><a href="natural-fibonacci_40.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_41</td>
+<td>
+!p. p 0 /\ p 1 /\ (!n. p n /\ p (n + 1) ==> p (n + 2)) ==> (!n. p n)</td>
+<td><a href="natural-fibonacci_41.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_42</td>
+<td>
+!j k.
+    snth fibonaccis (j + k + 1) =
+    snth fibonaccis j * snth fibonaccis k +
+    snth fibonaccis (j + 1) * snth fibonaccis (k + 1)</td>
+<td><a href="natural-fibonacci_42.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_43</td>
+<td>
+(!f p. decode_fib_dest f p [] = 0) /\
+(!f p h t.
+     decode_fib_dest f p (CONS h t) =
+     (let s = f + p in
+      let n = decode_fib_dest s f t in if h then s + n else n))</td>
+<td><a href="natural-fibonacci_43.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_44</td>
+<td>
+!l n f p.
+    encode_fib_mk l n f p =
+    (if p = 0
+     then l
+     else if f <= n
+          then encode_fib_mk (CONS T l) (n - f) p (f - p)
+          else encode_fib_mk (CONS F l) n p (f - p))</td>
+<td><a href="natural-fibonacci_44.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_45</td>
+<td>
+!h. (!f g n. (!m. m + 1 = n \/ m + 2 = n ==> f m = g m) ==> h f n = h g n)
+    ==> (?f. !n. f n = h f n)</td>
+<td><a href="natural-fibonacci_45.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+natural-fibonacci_46</td>
+<td>
+!b n f p r.
+    random_fib_dest b n f p r =
+    (let r1,r2 = split_random r in
+     let b' <=> random_bit r1 in
+     if b' /\ b
+     then n
+     else let s = f + p in
+          random_fib_dest b' (if b' then s + n else n) s f r2)</td>
+<td><a href="natural-fibonacci_46.html">link to proof</a></td>
+</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto; vertical-align: middle;"><a href="index.html"> Back to ProofCloud main page</a></div>
+</body>
+</html>

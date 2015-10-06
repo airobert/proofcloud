@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>natural-fibonacci_46</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Name</td>
+<td>natural-fibonacci_46</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Conclusion</td>
+<td>!b n f p r.
+    random_fib_dest b n f p r =
+    (let r1,r2 = split_random r in
+     let b' <=> random_bit r1 in
+     if b' /\ b
+     then n
+     else let s = f + p in
+          random_fib_dest b' (if b' then s + n else n) s f r2)</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Proof</td>
+<td>Yes</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Axiom</td>
+<td><pre>
+N|A</pre></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Classical Lemmas</td>
+<td>N|A</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Lemmas</td>
+<td><li>T</li><li>!x. x = x</li><li>!b n f p r.
+    random_fib_dest b n f p r =
+    (let r1,r2 = split_random r in
+     let b' <=> random_bit r1 in
+     if b' /\ b
+     then n
+     else let s = f + p in
+          random_fib_dest b' (if b' then s + n else n) s f r2)</li><li>!t. (!x. t) <=> t</li><li>!f y. (\x. f x) y = f y</li><li>T <=> (\p. p) = (\p. p)</li><li>LET_END = (\t. t)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>LET = (\f. f)</li><li>(!) = (\p. p = (\x. T))</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Contained Package</td>
+<td>natural-fibonacci</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Comment</td>
+<td>Probability package from OpenTheory.</td>
+
+	</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto;"><a href="natural-fibonacci.html" class="pull-left">Back to main package page</a><a href="natural-fibonacci.html" class="pull-right">Back to contained package page</a></div>
+</body>
+</html>

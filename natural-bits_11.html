@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>natural-bits_11</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Name</td>
+<td>natural-bits_11</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Conclusion</td>
+<td>bit_to_num T = 1</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Proof</td>
+<td>Yes</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Axiom</td>
+<td><pre>
+(\a. a = (\b. (\c. c) = (\c. c))) (\d. (\e. d e) = d) 
+(\a. a = (\b. (\c. c) = (\c. c)))
+(\d. (\e. e = (\f. (\c. c) = (\c. c)))
+     (\g. (\h i.
+               (\j k.
+                    (\l. l j k) =
+                    (\m. m ((\c. c) = (\c. c)) ((\c. c) = (\c. c))))
+               h
+               i <=>
+               h)
+          (d g)
+          (d ((@) d))))</pre></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Classical Lemmas</td>
+<td>N|A</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Lemmas</td>
+<td><li>T</li><li>!t1 t2. (if T then t1 else t2) = t1</li><li>!x. x = x</li><li>!x. (@y. y = x) = x</li><li>!t. (!x. t) <=> t</li><li>!t. F /\ t <=> F</li><li>!t. T /\ t <=> t</li><li>!t. t /\ F <=> F</li><li>!t. t /\ T <=> t</li><li>!t. t /\ t <=> t</li><li>!t. (F <=> t) <=> ~t</li><li>!t. (T <=> t) <=> t</li><li>!t. (t <=> F) <=> ~t</li><li>!t. (t <=> T) <=> t</li><li>!t. F ==> t <=> T</li><li>!t. T ==> t <=> t</li><li>!t. t ==> F <=> ~t</li><li>!t. t ==> T <=> T</li><li>!t. t ==> t</li><li>!f y. (\x. f x) y = f y</li><li>!f g. (!x. f x = g x) ==> f = g</li><li>!t. (\x. t x) = t</li><li>!p x. p x ==> p ((@) p)</li><li>F <=> (!p. p)</li><li>T <=> (\p. p) = (\p. p)</li><li>~F <=> T</li><li>~T <=> F</li><li>(~) = (\p. p ==> F)</li><li>COND = (\t t1 t2. @x. ((t <=> T) ==> x = t1) /\ ((t <=> F) ==> x = t2))</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li><li>(?) = (\p. !q. (!x. p x ==> q) ==> q)</li><li>(?) = (\p. p ((@) p))</li><li>NUMERAL = (\n. n)</li><li>bit_to_num T = 1</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Contained Package</td>
+<td>natural-bits</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Comment</td>
+<td>Probability package from OpenTheory.</td>
+
+	</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto;"><a href="natural-bits.html" class="pull-left">Back to main package page</a><a href="natural-bits.html" class="pull-right">Back to contained package page</a></div>
+</body>
+</html>

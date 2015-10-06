@@ -40,7 +40,7 @@ Name</td>
 
 	<td>
 Conclusion</td>
-<td>!f. siterate f = sunfold (\a. a,f a)</td>
+<td>!h t. snth (scons h t) 0 = h</td>
 
 	</tr>
  <tr>
@@ -55,7 +55,18 @@ Constructive Proof</td>
 	<td>
 Axiom</td>
 <td><pre>
-N|A</pre></td>
+(\a. a = (\b. (\c. c) = (\c. c))) (\d. (\e. d e) = d) 
+(\a. a = (\b. (\c. c) = (\c. c)))
+(\d. (\e. e = (\f. (\c. c) = (\c. c)))
+     (\g. (\h i.
+               (\j k.
+                    (\l. l j k) =
+                    (\m. m ((\c. c) = (\c. c)) ((\c. c) = (\c. c))))
+               h
+               i <=>
+               h)
+          (d g)
+          (d ((@) d))))</pre></td>
 
 	</tr>
  <tr>
@@ -69,7 +80,7 @@ Classical Lemmas</td>
 
 	<td>
 Constructive Lemmas</td>
-<td><li>T</li><li>!f. siterate f = sunfold (\a. a,f a)</li><li>T <=> (\p. p) = (\p. p)</li><li>(!) = (\p. p = (\x. T))</li></td>
+<td><li>T</li><li>!t1 t2. (if T then t1 else t2) = t1</li><li>!h t. snth (scons h t) 0 = h</li><li>!x. x = x</li><li>!x. (@y. y = x) = x</li><li>!t. (!x. t) <=> t</li><li>!t. F /\ t <=> F</li><li>!t. T /\ t <=> t</li><li>!t. t /\ F <=> F</li><li>!t. t /\ T <=> t</li><li>!t. t /\ t <=> t</li><li>!t. (F <=> t) <=> ~t</li><li>!t. (T <=> t) <=> t</li><li>!t. (t <=> F) <=> ~t</li><li>!t. (t <=> T) <=> t</li><li>!t. F ==> t <=> T</li><li>!t. T ==> t <=> t</li><li>!t. t ==> F <=> ~t</li><li>!t. t ==> T <=> T</li><li>!t. t ==> t</li><li>!f y. (\x. f x) y = f y</li><li>!f g. (!x. f x = g x) ==> f = g</li><li>!t. (\x. t x) = t</li><li>!p x. p x ==> p ((@) p)</li><li>!s. stream (snth s) = s</li><li>F <=> (!p. p)</li><li>T <=> (\p. p) = (\p. p)</li><li>~F <=> T</li><li>~T <=> F</li><li>(~) = (\p. p ==> F)</li><li>COND = (\t t1 t2. @x. ((t <=> T) ==> x = t1) /\ ((t <=> F) ==> x = t2))</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li><li>(?) = (\p. !q. (!x. p x ==> q) ==> q)</li><li>(?) = (\p. p ((@) p))</li><li>NUMERAL = (\n. n)</li></td>
 
 	</tr>
  <tr>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>natural-bits_67</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	    <th>Entry</th>
+
+	    <th>Value</th>
+ <tr>
+
+	<td>
+Name</td>
+<td>natural-bits_67</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Conclusion</td>
+<td>!n. bit_nth (bit_tl n) = bit_nth n o SUC</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Proof</td>
+<td>No</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Axiom</td>
+<td><pre>
+!t. t \/ ~t 
+(\a. a = (\b. (\c. c) = (\c. c))) (\d. (\e. d e) = d) 
+(\a. a = (\b. (\c. c) = (\c. c)))
+(\d. (\e. e = (\f. (\c. c) = (\c. c)))
+     (\g. (\h i.
+               (\j k.
+                    (\l. l j k) =
+                    (\m. m ((\c. c) = (\c. c)) ((\c. c) = (\c. c))))
+               h
+               i <=>
+               h)
+          (d g)
+          (d ((@) d)))) 
+(\a. (\b. b = (\c. (\d. d) = (\d. d)))
+     (\e. (\f g.
+               (\h i.
+                    (\j. j h i) =
+                    (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+               f
+               g <=>
+               f)
+          ((\l. l = (\m. (\d. d) = (\d. d)))
+          (\n. (\f g.
+                    (\h i.
+                         (\j. j h i) =
+                         (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                    f
+                    g <=>
+                    f)
+               (a n)
+               e))
+          e))
+(\p. (\h i. (\j. j h i) = (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+     ((\q. q = (\r. (\d. d) = (\d. d)))
+     (\s. (\q. q = (\r. (\d. d) = (\d. d)))
+          (\t. (\f g.
+                    (\h i.
+                         (\j. j h i) =
+                         (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                    f
+                    g <=>
+                    f)
+               (p s = p t)
+               (s = t))))
+     ((\u. (\f g.
+                (\h i.
+                     (\j. j h i) =
+                     (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                f
+                g <=>
+                f)
+           u
+           ((\b. b = (\c. (\d. d) = (\d. d))) (\d. d)))
+     ((\q. q = (\r. (\d. d) = (\d. d)))
+     (\v. (\w. (\b. b = (\c. (\d. d) = (\d. d)))
+               (\x. (\f g.
+                         (\h i.
+                              (\j. j h i) =
+                              (\k. k ((\d. d) = (\d. d)) ((\d. d) = (\d. d))))
+                         f
+                         g <=>
+                         f)
+                    ((\q. q = (\r. (\d. d) = (\d. d)))
+                    (\y. (\f g.
+                              (\h i.
+                                   (\j. j h i) =
+                                   (\k. k ((\d. d) = (\d. d))
+                                        ((\d. d) = (\d. d))))
+                              f
+                              g <=>
+                              f)
+                         (w y)
+                         x))
+                    x))
+          (\z. v = p z)))))</pre></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Classical Lemmas</td>
+<td><li>!e f. ?!fn. fn _0 = e /\ (!n. fn (SUC n) = f (fn n) n)</li><li>!t1 t2. ~(t1 /\ t2) <=> ~t1 \/ ~t2</li><li>!t1 t2. ~(t1 ==> t2) <=> t1 /\ ~t2</li><li>!t1 t2. ~(t1 \/ t2) <=> ~t1 /\ ~t2</li><li>!t. ~ ~t <=> t</li><li>!t. (t <=> T) \/ (t <=> F)</li><li>!f n. funpow f (SUC n) = funpow f n o f</li><li>!f. funpow f 1 = f</li><li>!p. (?x. ~p x) <=> ~(!x. p x)</li><li>!p. ~(!x. p x) <=> (?x. ~p x)</li><li>!p. ~(?x. p x) <=> (!x. ~p x)</li><li>!m n q r. m = q * n + r /\ r < n ==> m DIV n = q</li><li>!m n q r. m = q * n + r /\ r < n ==> m MOD n = r</li><li>!m n p. m * n < m * p <=> ~(m = 0) /\ n < p</li><li>!m n p. m + n < m + p <=> n < p</li><li>!m n p. m * n <= m * p <=> m = 0 \/ n <= p</li><li>!m n p. m + n <= m + p <=> n <= p</li><li>!m n p. m * p = n * p <=> m = n \/ p = 0</li><li>!m n p. m * n = m * p <=> m = 0 \/ n = p</li><li>!p m n. m + p = n + p <=> m = n</li><li>!m n p. m + n = m + p <=> n = p</li><li>!m n p. m * n * p = n * m * p</li><li>!m n p. m * n * p = (m * n) * p</li><li>!m n p. m * (n + p) = m * n + m * p</li><li>!m n p. (m + n) * p = m * p + n * p</li><li>!a b n. ~(a = 0) ==> (n <= b DIV a <=> a * n <= b)</li><li>!m n p. ~(n * p = 0) ==> m DIV n DIV p = m DIV (n * p)</li><li>!m n p. m <= n /\ n < p ==> m < p</li><li>!m n p. m <= n /\ n <= p ==> m <= p</li><li>!m n. n * m DIV n <= m</li><li>!m n. ~(m <= n) <=> n < m</li><li>!m n. m <= n /\ n <= m <=> m = n</li><li>!m n. m < n <=> (?d. n = m + SUC d)</li><li>!m n. SUC m < SUC n <=> m < n</li><li>!m n. m <= n <=> (?d. n = m + d)</li><li>!m n. SUC m <= n <=> m < n</li><li>!m n. SUC m <= SUC n <=> m <= n</li><li>!m n. SUC m = SUC n <=> m = n</li><li>!m n. m * n = 0 <=> m = 0 \/ n = 0</li><li>!m n. m + n = 0 <=> m = 0 /\ n = 0</li><li>!m n. m EXP n = 0 <=> m = 0 /\ ~(n = 0)</li><li>!m n. m * n = n * m</li><li>!m n. ~(n = 0) ==> m MOD n < n</li><li>!m n. ~(n = 0) ==> m DIV n * n + m MOD n = m</li><li>!m n. m <= n \/ n <= m</li><li>!n. ~(n < n)</li><li>!n. ~(SUC n = _0)</li><li>!n. bit_nth (bit_tl n) = bit_nth n o SUC</li><li>!n. BIT0 (SUC n) = SUC (SUC (BIT0 n))</li><li>!m. SUC m = m + 1</li><li>!m. m * 1 = m</li><li>!m. 1 * m = m</li><li>!n. n DIV 1 = n</li><li>BIT0 0 = 0</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Constructive Lemmas</td>
+<td><li>T</li><li>!t1 t2. (if F then t1 else t2) = t2</li><li>!t1 t2. (if T then t1 else t2) = t1</li><li>!x y. x = y <=> y = x</li><li>!x y. x = y ==> y = x</li><li>!e f. ?!fn. fn _0 = e /\ (!n. fn (SUC n) = f (fn n) n)</li><li>!a. ?x. x = a</li><li>!a. ?!x. x = a</li><li>!x. x = x</li><li>!x. (@y. y = x) = x</li><li>!x. I x = x</li><li>!p1 p2 q1 q2. (p1 ==> p2) /\ (q1 ==> q2) ==> p1 /\ q1 ==> p2 /\ q2</li><li>!p1 p2 q1 q2. (p1 ==> p2) /\ (q1 ==> q2) ==> p1 \/ q1 ==> p2 \/ q2</li><li>!t1 t2 t3. (t1 /\ t2) /\ t3 <=> t1 /\ t2 /\ t3</li><li>!t1 t2 t3. (t1 \/ t2) \/ t3 <=> t1 \/ t2 \/ t3</li><li>!t1 t2. ~(t1 /\ t2) <=> ~t1 \/ ~t2</li><li>!t1 t2. ~(t1 ==> t2) <=> t1 /\ ~t2</li><li>!t1 t2. ~(t1 \/ t2) <=> ~t1 /\ ~t2</li><li>!t1 t2. t1 \/ t2 <=> t2 \/ t1</li><li>!p q. (?x. p /\ q x) <=> p /\ (?x. q x)</li><li>!p q. p /\ (?x. q x) <=> (?x. p /\ q x)</li><li>!p q. p \/ (?x. q x) <=> (?x. p \/ q x)</li><li>!t. (!x. t) <=> t</li><li>!t. (?x. t) <=> t</li><li>!t. ~ ~t <=> t</li><li>!t. F /\ t <=> F</li><li>!t. T /\ t <=> t</li><li>!t. t /\ F <=> F</li><li>!t. t /\ T <=> t</li><li>!t. t /\ t <=> t</li><li>!t. (F <=> t) <=> ~t</li><li>!t. (T <=> t) <=> t</li><li>!t. (t <=> F) <=> ~t</li><li>!t. (t <=> T) <=> t</li><li>!t. F ==> t <=> T</li><li>!t. T ==> t <=> t</li><li>!t. t ==> F <=> ~t</li><li>!t. t ==> T <=> T</li><li>!t. F \/ t <=> t</li><li>!t. T \/ t <=> T</li><li>!t. t \/ F <=> t</li><li>!t. t \/ T <=> T</li><li>!t. t \/ t <=> t</li><li>!t. t ==> t</li><li>!t. (t <=> T) \/ (t <=> F)</li><li>!f n. funpow f (SUC n) = f o funpow f n</li><li>!f n. funpow f (SUC n) = funpow f n o f</li><li>!f. funpow f 0 = I</li><li>!f. funpow f 1 = f</li><li>!f y. (\x. f x) y = f y</li><li>!f g. (!x. f x = g x) <=> f = g</li><li>!f g. (!x. f x = g x) ==> f = g</li><li>!f. ONE_ONE f <=> (!x1 x2. f x1 = f x2 ==> x1 = x2)</li><li>!f. ONTO f <=> (!y. ?x. y = f x)</li><li>!f. f o I = f</li><li>!f. I o f = f</li><li>!t. (\x. t x) = t</li><li>!p a. (?x. a = x /\ p x) <=> p a</li><li>!p x. p x ==> p ((@) p)</li><li>!p q. (?x. p x) ==> q <=> (!x. p x ==> q)</li><li>!p q. (?x. p x) \/ q <=> (?x. p x \/ q)</li><li>!p q. (!x. p x /\ q x) <=> (!x. p x) /\ (!x. q x)</li><li>!p q. (?x. p x \/ q x) <=> (?x. p x) \/ (?x. q x)</li><li>!p q. (!x. p x) /\ (!x. q x) <=> (!x. p x /\ q x)</li><li>!p q. (?x. p x) \/ (?x. q x) <=> (?x. p x \/ q x)</li><li>!p q. (!x. p x ==> q x) ==> (?x. p x) ==> (?x. q x)</li><li>!p. (?x. ~p x) <=> ~(!x. p x)</li><li>!p. (?!x. p x) <=> (?x. !y. p y <=> x = y)</li><li>!p. (?!x. p x) <=> (?x. p x) /\ (!x x'. p x /\ p x' ==> x = x')</li><li>!p. ~(!x. p x) <=> (?x. ~p x)</li><li>!p. ~(?x. p x) <=> (!x. ~p x)</li><li>!r. (!x. ?y. r x y) <=> (?f. !x. r x (f x))</li><li>!p. (!x. ?!y. p x y) <=> (?f. !x y. p x y <=> f x = y)</li><li>!f g x. (f o g) x = f (g x)</li><li>!f g h. (f o g) o h = f o g o h</li><li>!p. p _0 /\ (!n. p n ==> p (SUC n)) ==> (!n. p n)</li><li>!m n q r. m = q * n + r /\ r < n ==> m DIV n = q</li><li>!m n q r. m = q * n + r /\ r < n ==> m MOD n = r</li><li>!m n p. m * n < m * p <=> ~(m = 0) /\ n < p</li><li>!m n p. m + n < m + p <=> n < p</li><li>!m n p. m * n <= m * p <=> m = 0 \/ n <= p</li><li>!m n p. m + n <= m + p <=> n <= p</li><li>!m n p. m * p = n * p <=> m = n \/ p = 0</li><li>!m n p. m * n = m * p <=> m = 0 \/ n = p</li><li>!p m n. m + p = n + p <=> m = n</li><li>!m n p. m + n = m + p <=> n = p</li><li>!m n p. m * n * p = n * m * p</li><li>!m n p. m * n * p = (m * n) * p</li><li>!m n p. m * (n + p) = m * n + m * p</li><li>!m n p. (m + n) * p = m * p + n * p</li><li>!m n p. m + n + p = (m + n) + p</li><li>!a b n. ~(a = 0) ==> (n <= b DIV a <=> a * n <= b)</li><li>!m n p. ~(n * p = 0) ==> m DIV n DIV p = m DIV (n * p)</li><li>!m n p. m <= n /\ n < p ==> m < p</li><li>!m n p. m <= n /\ n <= p ==> m <= p</li><li>!m n. m <= m + n</li><li>!m n. n * m DIV n <= m</li><li>!m n. ~(m <= n) <=> n < m</li><li>!m n. m <= n /\ n <= m <=> m = n</li><li>!m n. m < n <=> (?d. n = m + SUC d)</li><li>!m n. m < SUC n <=> m <= n</li><li>!m n. m < SUC n <=> m = n \/ m < n</li><li>!m n. SUC m < SUC n <=> m < n</li><li>!m n. m <= n <=> (?d. n = m + d)</li><li>!m n. m <= SUC n <=> m = SUC n \/ m <= n</li><li>!m n. SUC m <= n <=> m < n</li><li>!m n. SUC m <= SUC n <=> m <= n</li><li>!m n. SUC m = SUC n <=> m = n</li><li>!m n. m * n = 0 <=> m = 0 \/ n = 0</li><li>!m n. m + n = 0 <=> m = 0 /\ n = 0</li><li>!m n. m EXP n = 0 <=> m = 0 /\ ~(n = 0)</li><li>!m n. m * n = n * m</li><li>!m n. m * SUC n = m + m * n</li><li>!m n. SUC m * n = m * n + n</li><li>!m n. m + n = n + m</li><li>!m n. m + SUC n = SUC (m + n)</li><li>!m n. SUC m + n = SUC (m + n)</li><li>!m n. m EXP SUC n = m * m EXP n</li><li>!m n. ~(n = 0) ==> m MOD n < n</li><li>!m n. ~(n = 0) ==> m DIV n * n + m MOD n = m</li><li>!m n. m <= n \/ n <= m</li><li>!n. ~(n < n)</li><li>!m. ~(m < 0)</li><li>!n. ~(SUC n = _0)</li><li>!n. 0 < SUC n</li><li>!n. n <= n</li><li>!n. 0 <= n</li><li>!m. m <= 0 <=> m = 0</li><li>!n. bit_nth (bit_tl n) = bit_nth n o SUC</li><li>!n. BIT0 (SUC n) = SUC (SUC (BIT0 n))</li><li>!n. BIT1 n = SUC (BIT0 n)</li><li>!m. SUC m = m + 1</li><li>!m. m * 0 = 0</li><li>!m. m * 1 = m</li><li>!n. 0 * n = 0</li><li>!m. 1 * m = m</li><li>!m. m + 0 = m</li><li>!n. 0 + n = n</li><li>!n. n DIV 1 = n</li><li>!m. m EXP 0 = 1</li><li>?f. ONE_ONE f /\ ~ONTO f</li><li>F <=> (!p. p)</li><li>T <=> (\p. p) = (\p. p)</li><li>~F <=> T</li><li>~T <=> F</li><li>I = (\x. x)</li><li>(~) = (\p. p ==> F)</li><li>COND = (\t t1 t2. @x. ((t <=> T) ==> x = t1) /\ ((t <=> F) ==> x = t2))</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(\/) = (\p q. !r. (p ==> r) ==> (q ==> r) ==> r)</li><li>(!) = (\p. p = (\x. T))</li><li>(?) = (\p. !q. (!x. p x ==> q) ==> q)</li><li>(?) = (\p. p ((@) p))</li><li>(?!) = (\p. (?) p /\ (!x y. p x /\ p y ==> x = y))</li><li>(o) = (\f g x. f (g x))</li><li>NUMERAL = (\n. n)</li><li>BIT0 0 = 0</li></td>
+
+	</tr>
+ <tr>
+
+	<td>
+Contained Package</td>
+<td>natural-bits</td>
+
+	</tr>
+ <tr>
+
+	<td>
+Comment</td>
+<td>Probability package from OpenTheory.</td>
+
+	</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto;"><a href="natural-bits.html" class="pull-left">Back to main package page</a><a href="natural-bits.html" class="pull-right">Back to contained package page</a></div>
+</body>
+</html>

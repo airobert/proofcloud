@@ -40,7 +40,7 @@ Name</td>
 
 	<td>
 Conclusion</td>
-<td>!f g s. smap (f o g) s = smap f (smap g s)</td>
+<td>!s m n. snth s (m + n) = snth (sdrop s n) m</td>
 
 	</tr>
  <tr>
@@ -69,7 +69,7 @@ Classical Lemmas</td>
 
 	<td>
 Constructive Lemmas</td>
-<td><li>T</li><li>!x y. x = y ==> y = x</li><li>!x. x = x</li><li>!t. (!x. t) <=> t</li><li>!t. (T <=> t) <=> t</li><li>!f y. (\x. f x) y = f y</li><li>!f s. smap f s = stream (f o snth s)</li><li>!f g s. smap (f o g) s = smap f (smap g s)</li><li>!f g h. (f o g) o h = f o g o h</li><li>!f g h. f o g o h = (f o g) o h</li><li>!s. stream (snth s) = s</li><li>T <=> (\p. p) = (\p. p)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li><li>(o) = (\f g x. f (g x))</li></td>
+<td><li>T</li><li>!t. (!x. t) <=> t</li><li>!t. (T <=> t) <=> t</li><li>!s m n. snth s (m + n) = snth (sdrop s n) m</li><li>!s n. sdrop s n = stream (\m. snth s (m + n))</li><li>!s. stream (snth s) = s</li><li>T <=> (\p. p) = (\p. p)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li></td>
 
 	</tr>
  <tr>

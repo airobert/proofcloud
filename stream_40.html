@@ -40,7 +40,7 @@ Name</td>
 
 	<td>
 Conclusion</td>
-<td>!h t. scons h t = stream (\n. if n = 0 then h else snth t (n - 1))</td>
+<td>!f b. sunfold f b = stream (\n. FST (f (funpow (SND o f) n b)))</td>
 
 	</tr>
  <tr>
@@ -69,7 +69,7 @@ Classical Lemmas</td>
 
 	<td>
 Constructive Lemmas</td>
-<td><li>T</li><li>!h t. scons h t = stream (\n. if n = 0 then h else snth t (n - 1))</li><li>!x. x = x</li><li>!t. (!x. t) <=> t</li><li>!f y. (\x. f x) y = f y</li><li>T <=> (\p. p) = (\p. p)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li><li>NUMERAL = (\n. n)</li></td>
+<td><li>T</li><li>!f b. sunfold f b = stream (\n. FST (f (funpow (SND o f) n b)))</li><li>T <=> (\p. p) = (\p. p)</li><li>(!) = (\p. p = (\x. T))</li></td>
 
 	</tr>
  <tr>

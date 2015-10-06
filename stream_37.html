@@ -40,7 +40,7 @@ Name</td>
 
 	<td>
 Conclusion</td>
-<td>!f b. sunfold f b = stream (\n. FST (f (funpow (SND o f) n b)))</td>
+<td>!s1 s2. (!n. snth s1 n = snth s2 n) <=> s1 = s2</td>
 
 	</tr>
  <tr>
@@ -55,7 +55,7 @@ Constructive Proof</td>
 	<td>
 Axiom</td>
 <td><pre>
-N|A</pre></td>
+(\a. a = (\b. (\c. c) = (\c. c))) (\d. (\e. d e) = d)</pre></td>
 
 	</tr>
  <tr>
@@ -69,7 +69,7 @@ Classical Lemmas</td>
 
 	<td>
 Constructive Lemmas</td>
-<td><li>T</li><li>!f b. sunfold f b = stream (\n. FST (f (funpow (SND o f) n b)))</li><li>T <=> (\p. p) = (\p. p)</li><li>(!) = (\p. p = (\x. T))</li></td>
+<td><li>T</li><li>!x y. x = y <=> y = x</li><li>!x y. x = y ==> y = x</li><li>!x. x = x</li><li>!t. (!x. t) <=> t</li><li>!t. F ==> t <=> T</li><li>!t. T ==> t <=> t</li><li>!t. t ==> F <=> ~t</li><li>!t. t ==> T <=> T</li><li>!t. t ==> t</li><li>!f g. (!x. f x = g x) <=> f = g</li><li>!f g. (!x. f x = g x) ==> f = g</li><li>!t. (\x. t x) = t</li><li>!s1 s2. (!n. snth s1 n = snth s2 n) <=> s1 = s2</li><li>!s. stream (snth s) = s</li><li>F <=> (!p. p)</li><li>T <=> (\p. p) = (\p. p)</li><li>(~) = (\p. p ==> F)</li><li>(/\) = (\p q. (\f. f p q) = (\f. f T T))</li><li>(==>) = (\p q. p /\ q <=> p)</li><li>(!) = (\p. p = (\x. T))</li></td>
 
 	</tr>
  <tr>

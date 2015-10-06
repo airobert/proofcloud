@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+
+	<html>
+
+	<head>
+
+	<style>
+
+	</style>
+
+	<title>probability</title>
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+	</head>
+
+	
+
+	<body>
+
+	<img src="ProofCloud.jpg" width="200">
+<ul style="list-style-type:none"><li>Package Name: probability</li><li>Author: Joe Leslie-Hurd</li><li><a href="probability_packages.html">Sub Packages</a>
+</li><li><a href="probability_verification.html">Verification Results</a>
+</li><li>Date Retrieved: 04/10/2015</li><li>Total number of proofs: 18</li><li>Among them, there are 10 constructive proofs and 8 classical proofs, which means 55.56% of them are constructive proofs.</li><li>Classical proofs have an average size of 1.00 (up to lemma). Constructive proofs have an average size of 1.00 (up to lemma).</li><li>Comment: Probability package from OpenTheory.</li></ul> <table class="table table-bordered table-striped table-hover" style="width:80%"align="center">
+
+	  <tr>
+
+	  	<th>Name</th>
+
+	    <th>Conclusion</th>
+
+	    <th>Link</th>
+ <tr>
+
+	<td>
+probability_1</td>
+<td>
+random_geometric = random_geometric_loop 0</td>
+<td><a href="probability_1.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_2</td>
+<td>
+random_bits = random_vector random_bit</td>
+<td><a href="probability_2.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_3</td>
+<td>
+!r. mk_random (dest_random r) = r</td>
+<td><a href="probability_3.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_4</td>
+<td>
+!s. dest_random (mk_random s) = s</td>
+<td><a href="probability_4.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_5</td>
+<td>
+!b. ?r. random_bit r <=> b</td>
+<td><a href="probability_5.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_6</td>
+<td>
+!r. random_bit r <=> shd (dest_random r)</td>
+<td><a href="probability_6.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_7</td>
+<td>
+!n r. LENGTH (random_bits n r) = n</td>
+<td><a href="probability_7.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_8</td>
+<td>
+!f r. random_vector f 0 r = []</td>
+<td><a href="probability_8.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_9</td>
+<td>
+!r1 r2. ?r. split_random r = r1,r2</td>
+<td><a href="probability_9.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_10</td>
+<td>
+!f n r. LENGTH (random_vector f n r) = n</td>
+<td><a href="probability_10.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_11</td>
+<td>
+!n l. LENGTH l = n ==> (?r. random_bits n r = l)</td>
+<td><a href="probability_11.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_12</td>
+<td>
+!f n l. ONTO f /\ LENGTH l = n ==> (?r. random_vector f n r = l)</td>
+<td><a href="probability_12.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_13</td>
+<td>
+!r. split_random r =
+    (let s1,s2 = ssplit (dest_random r) in mk_random s1,mk_random s2)</td>
+<td><a href="probability_13.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_14</td>
+<td>
+!f r.
+    random_geometric_list f r =
+    (let r1,r2 = split_random r in random_vector f (random_geometric r1) r2)</td>
+<td><a href="probability_14.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_15</td>
+<td>
+!n r.
+    random_geometric_loop n r =
+    (let r1,r2 = split_random r in
+     if random_bit r1 then n else random_geometric_loop (SUC n) r2)</td>
+<td><a href="probability_15.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_16</td>
+<td>
+!n r.
+    random_geometric_loop n r =
+    (let r1,r2 = split_random r in
+     if random_bit r1 then n else random_geometric_loop (n + 1) r2)</td>
+<td><a href="probability_16.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_17</td>
+<td>
+!f r n.
+    random_vector f (SUC n) r =
+    (let r1,r2 = split_random r in CONS (f r1) (random_vector f n r2))</td>
+<td><a href="probability_17.html">link to proof</a></td>
+</tr>
+ <tr>
+
+	<td>
+probability_18</td>
+<td>
+!f n r.
+    random_vector f n r =
+    (if n = 0
+     then []
+     else let r1,r2 = split_random r in
+          CONS (f r1) (random_vector f (n - 1) r2))</td>
+<td><a href="probability_18.html">link to proof</a></td>
+</tr>
+</table>
+<div style="height:40px; width:370px; margin:0 auto; vertical-align: middle;"><a href="index.html"> Back to ProofCloud main page</a></div>
+</body>
+</html>
